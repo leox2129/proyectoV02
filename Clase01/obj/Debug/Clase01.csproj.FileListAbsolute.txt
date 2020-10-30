@@ -1,0 +1,2 @@
+C:\Users\leandro\Documents\Programacion3\01clase\Clase01\Clase01\obj\Debug\Clase01.csprojAssemblyReference.cache
+C:\Users\leandro\Documents\Programacion3\01clase\Clase01\Clase01\obj\Debug\Clase01.csproj.CoreCompileInputs.cache

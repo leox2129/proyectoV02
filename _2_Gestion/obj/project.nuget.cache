@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PCC/90ISw/ev+TfVAkADDQJNjmj29xVte3MEiNrhe+v9pFG/U19LmfOxzvhBe4989efWRNRI5HaYkp0Z+xU+Iw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_2_Gestion\\_2_Gestion.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\equipo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\equipo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

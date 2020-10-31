@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _4_TipoDeDato;
 using Negocio;
+using Presentacion.Variables;
+
 
 namespace Presentacion.Formularios
 {
@@ -28,36 +30,21 @@ namespace Presentacion.Formularios
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            Usuario usuario = new Usuario();
-
-            //DTUsuario = new DTUsuario();
-
-
-            DTUsuario usu = new DTUsuario(txtMombreUsu.Text, txtPassUsuario.Text);
-            DTUsuario usuObtenido = usuario.ObtenerUsuario(usu);
-            
-            
-            
-            
-
-
-
+        {            
             string errores ="";
             bool error = false;
-            string usuarioNombre = txtMombreUsu.Text;
-            string usuarioPasword = txtMombreUsu.Text;
+            string usuarioNombre = txtMombreUsu.Text.Trim();
+            string usuarioPasword = txtPassUsuario.Text.Trim();
 
-
-
-            if (string.IsNullOrEmpty(txtMombreUsu.Text))
+            if (string.IsNullOrEmpty(usuarioNombre))
             {
                 error = true;
                 errores = "el nombre usuario esta vacio\n";
             }
-            if (string.IsNullOrEmpty(txtMombreUsu.Text)){
+            if (string.IsNullOrEmpty(usuarioPasword)){
                 error = true;
-                errores = "el nombre usuario esta vacio\n";
+                //errores = errores + "el nombre usuario esta vacio\n";
+                errores += "el nombre password esta vacio\n";
             }
 
             if (error)
@@ -66,9 +53,19 @@ namespace Presentacion.Formularios
             }
             else
             {
-                //llamarias al negocio
+                Usuario usuario = new Usuario();
+                int idUsuario = usuario.ObtenerUsuario(usuarioNombre, usuarioPasword, Variables.Globales.nombrePrograma);
+                if (idUsuario >= 1) 
+                {
+                    Variables.Globales.idUsuario = idUsuario;
+                    Menu ap = new Menu();
+                    ap.Show();
+                } 
+                else 
+                {
+                    MessageBox.Show(errores);
+                }               
             }
-
 
 
 

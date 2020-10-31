@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 using _4_TipoDeDato;
+using _3_Persistencia;
 
 namespace Negocio
 {
     public class Usuario
-    {        
+    {
+        private int id;
+        private string nombre;
+
+        public Usuario()
+        {
+
+        }
         public int RegsitrarUsuario(DTUsuario usu)
         {
             int idusuario = 0;
@@ -17,12 +25,21 @@ namespace Negocio
             return idusuario;
         }
 
-        public DTUsuario ObtenerUsuario(DTUsuario usu)
+        /// <summary>
+        /// retorna el id del usuario
+        /// </summary>
+        /// <param name="nombreUsuario"></param>
+        /// <param name="pasword"></param>
+        /// <param name="usuarioRol"></param>
+        /// <returns></returns>
+        public int ObtenerUsuario(string nombreUsuario, string pasword, string usuarioRol)
         {
-            DTUsuario dataUsuario = new DTUsuario();
-            //PersistenciaUsuario p = new PersistenciaUsuario();
-            return dataUsuario;
-            //return p.ObtenerUsuario(usu);
+
+            int usuarioId = -1;
+            PersistenciaUsuario usuarioPersistencia = new PersistenciaUsuario();            
+            usuarioId = usuarioPersistencia.ObtenerUsuario(nombreUsuario, pasword, usuarioRol);
+            return usuarioId;
+            
         }
     }
     

@@ -85,7 +85,8 @@
     <Compile Include="Formularios\NivelSintomas.Designer.cs">
       <DependentUpon>NivelSintomas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Enum.cs" />
+    <Compile Include="Variables\Globales.cs" />
+    <Compile Include="Variables\Enum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\AgregarProducto.resx">

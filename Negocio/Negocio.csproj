@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Reference Include="_3_Persistencia">
-      <HintPath>..\Persistencia\bin\Debug\netstandard2.0\_3_Persistencia.dll</HintPath>
+      <HintPath>..\_3_Persistencia\bin\Debug\netstandard2.0\_3_Persistencia.dll</HintPath>
     </Reference>
     <Reference Include="_4_TipoDeDato">
       <HintPath>..\04_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.dll</HintPath>

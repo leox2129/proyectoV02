@@ -58,6 +58,35 @@ namespace Presentacion.Formularios
             ap.Show();
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void btnMaximisar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            btnMaximisar.Visible = false;
+            btnRestau.Visible = true;
+
+        }
+
+        private void btnRestau_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestau.Visible = false;
+            btnMaximisar.Visible = true;
+
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
     }
 }
 

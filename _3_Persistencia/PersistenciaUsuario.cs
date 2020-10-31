@@ -43,51 +43,60 @@ namespace _3_Persistencia
 
 
         /// <summary>
-        /// login
+        /// login 
         /// </summary>
         /// <param name="usu"></param>
         /// <returns></returns>
-        public DTUsuario ObtenerUsuario(DTUsuario usu)
+        public int ObtenerUsuario(string usuarioNombre, string usuarioPasword, string usuarioRol)
         {
-            DTUsuario uARetornar = null;
-
+            int uARetornar = -2;
             MySqlConnection conexion = null;
+            MySqlDataReader reader = null;
             try
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql = "select idusuario, nombre, password from usuarios where nombre = @nombre and password = @password ";
+                string sql = @"select idusuario, nombre, password 
+                               from usuarios where nombre=@nombre and password=@password";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@nombre", usu.Nombre);
-                comando.Parameters.AddWithValue("@password", usu.Password);
-                MySqlDataReader reader = comando.ExecuteReader();
-                
+                comando.Parameters.AddWithValue("@nombre", usuarioNombre);
+                comando.Parameters.AddWithValue("@password", usuarioPasword);
+                reader = comando.ExecuteReader();
+                //si hay por lo menos una fila entra
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        Int32 id = reader.GetInt32(0);
+                        int id = reader.GetInt32(0);
                         string nombre = (reader[1] != DBNull.Value) ? reader.GetString(1) : "";
                         string password = (reader[2] != DBNull.Value) ? reader.GetString(2) : "";
-                        uARetornar = new DTUsuario(id, nombre, password);
+                        //string rol = (reader[3] != DBNull.Value) ? reader.GetString(2) : "";
+                        //if (usuarioRol==)
+                        uARetornar = id;
                     }
-                }
-                    return uARetornar;
+                }                
             }
             catch (MySqlException ex)
             {
                 string mensaje = ex.ToString();
                 Console.WriteLine("Error: " + mensaje);
-                return uARetornar;
+                uARetornar=-1;
             }
             finally
             {
                 if (conexion != null)
                 {
                     conexion.Close();
+                    conexion.Dispose();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                    conexion.Dispose();
                 }
 
             }
+            return uARetornar;
         }
     }
 }

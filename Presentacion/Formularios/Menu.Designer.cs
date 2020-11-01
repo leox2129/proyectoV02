@@ -64,7 +64,7 @@
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(218, 28);
             this.btnAgregarProducto.TabIndex = 1;
-            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.Text = "Agregar Sintoma";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 

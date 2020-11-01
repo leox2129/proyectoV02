@@ -87,6 +87,10 @@ namespace Presentacion.Formularios
 
         }
 
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

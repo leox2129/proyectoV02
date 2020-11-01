@@ -56,7 +56,7 @@ namespace _3_Persistencia
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql = @"select idusuario, nombre, password 
+                string sql = @"select idUsuario, nombre, password 
                                from usuarios where nombre=@nombre and password=@password";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 comando.Parameters.AddWithValue("@nombre", usuarioNombre);

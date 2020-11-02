@@ -25,13 +25,19 @@ namespace Presentacion.Formularios
         List<DTSintoma> list;
         //lista de todos los sintomas.
         List<DTSintoma> listasintomas;
-        private int indice = -1;        
+        private int indice = -1;
+        private string nombreSintoma;
+
         public Sintoma()
         {
             InitializeComponent();
             Initcombox();
         }
-        
+
+        public Sintoma(string nombreSintoma)
+        {
+            this.nombreSintoma = nombreSintoma;
+        }
 
         private void Initcombox()
         {
@@ -57,6 +63,8 @@ namespace Presentacion.Formularios
             ListarSintomas();
             
         }
+
+        
 
         //eliminar por nombre
         private void EliminarSintomas()
@@ -114,7 +122,7 @@ namespace Presentacion.Formularios
             }
         }
 
-        private void btn_Click(object sender1, EventArgs e1, string text, int id)
+        private void btn_Click(object sender1, EventArgs e1, string text, long id)
         {
             bool encontrado = false;
             int cantidad = this.list.Count;
@@ -135,7 +143,7 @@ namespace Presentacion.Formularios
             ListarSintomas();
         }
 
-        private void Txt_TextChanged(object sender, EventArgs e, string coef, int id)
+        private void Txt_TextChanged(object sender, EventArgs e, string coef, long id)
         {
             //            
             //this.list.Find(x => x.Id == id);
@@ -181,7 +189,7 @@ namespace Presentacion.Formularios
                     }
                     iter++;
                 }*/
-                int id = this.listasintomas[indice].Id;
+                long id = this.listasintomas[indice].Id;
                 DTSintoma sintomaData = this.listasintomas[indice];
                 string sintoma = this.listasintomas[indice].Sintoma;
                 MessageBox.Show("id:" + id + " el sintoma es: " + sintoma);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 
 namespace Presentacion.Formularios
 {
@@ -20,12 +21,10 @@ namespace Presentacion.Formularios
         private void btnAgregarSintoma_Click(object sender, EventArgs e)
         {
             //gi obterner el texto
-            string nombrePatolologia = txtNombre.Text.Trim();
-            bool error = false;
+            string nombreSintoma = txtNombre.Text.Trim();            
             string errores = "";
-            if (string.IsNullOrEmpty(nombrePatolologia))
-            {
-                error = true;
+            if (string.IsNullOrEmpty(nombreSintoma))
+            {                
                 errores = "el nombre esta vacío\n";
                 MessageBox.Show(errores);
             }
@@ -33,6 +32,9 @@ namespace Presentacion.Formularios
             {                
                 try{
                     //agregar sintoma
+                    SintomaModelo sintoma = new SintomaModelo(nombreSintoma);
+                    long idsintoma = sintoma.Agregar();
+
                 }
                 catch (Exception)
                 {
@@ -40,6 +42,11 @@ namespace Presentacion.Formularios
 
                 }
             }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

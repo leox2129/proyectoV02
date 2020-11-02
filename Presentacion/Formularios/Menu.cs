@@ -23,7 +23,8 @@ namespace Presentacion.Formularios
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            AgregarProducto ap = new AgregarProducto();
+
+            AgregarSintoma ap = new AgregarSintoma();
             ap.Show();
 
             //UsuarioView usuarioView= new UsuarioView();

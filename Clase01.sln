@@ -14,8 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_3_Persistencia", "_3_Persistencia\_3_Persistencia.csproj", "{148D5C36-D2CA-47C5-9B2A-ED8D737B5598}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_1_Presentacion", "Presentacion\_1_Presentacion.csproj", "{D2331543-7E4F-49AF-8609-3207CE747748}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion2", "..\Prog3\clase07\Presentacion2\Presentacion2.csproj", "{F9610350-3B60-4EF0-B003-EA8C842AA316}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7} = {A6ECE11D-8564-4359-A45A-1FDFB8A236E7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +40,6 @@ Global
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9610350-3B60-4EF0-B003-EA8C842AA316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9610350-3B60-4EF0-B003-EA8C842AA316}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9610350-3B60-4EF0-B003-EA8C842AA316}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9610350-3B60-4EF0-B003-EA8C842AA316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

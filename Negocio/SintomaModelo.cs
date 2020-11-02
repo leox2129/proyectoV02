@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Xml;
 using _3_Persistencia;
-
+using _4_TipoDeDato;
 
 namespace Negocio
 {
@@ -21,6 +21,18 @@ namespace Negocio
             {
                 this.nombreSintoma = nombreSintoma.Substring(0, 45);
             }                        
+        }
+
+        public SintomaModelo()
+        {
+        }
+
+        public List<DTSintoma> ListarSintomas()
+        {
+            List<DTSintoma> list= new List<DTSintoma>();
+            PersistenciaSintoma persistencia = new PersistenciaSintoma();
+            list = persistencia.ListarSintomas();
+            return list;
         }
 
         public long Agregar()

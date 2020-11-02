@@ -16,8 +16,15 @@ namespace Presentacion.Formularios
         public AgregarSintoma()
         {
             InitializeComponent();
+            InitDataGrid();
         }
 
+        private void InitDataGrid()
+        {
+            SintomaModelo modelo = new SintomaModelo();
+            dgvSintomas.DataSource = modelo.ListarSintomas();            
+        }
+            
         private void btnAgregarSintoma_Click(object sender, EventArgs e)
         {
             //gi obterner el texto
@@ -34,6 +41,8 @@ namespace Presentacion.Formularios
                     //agregar sintoma
                     SintomaModelo sintoma = new SintomaModelo(nombreSintoma);
                     long idsintoma = sintoma.Agregar();
+                    txtNombre.Text = "";
+                    this.InitDataGrid();
 
                 }
                 catch (Exception)

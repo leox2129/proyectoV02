@@ -14,7 +14,7 @@ namespace _4_TipoDeDato
         public DTSintoma(long id, string sintoma)
         {
             this.id = id;
-            this.sintoma = this.sintoma;
+            this.sintoma = sintoma;
         }
 
         public DTSintoma(long id, string sintoma, double coef)

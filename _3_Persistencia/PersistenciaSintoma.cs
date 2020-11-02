@@ -71,65 +71,33 @@ namespace _3_Persistencia
             }
         }*/
 
-        /*public List<DTSintoma> ListarSintomas(string consulta = null)
+        public List<DTSintoma> ListarSintomas()
         {
-            List<ProductoEntidad> list = new List<ProductoEntidad>();
+            List<DTSintoma> list = new List<DTSintoma>();
             MySqlConnection conexion = null;
+            MySqlDataReader reader = null;
             try
             {
-                MySqlDataReader reader = null;
+                
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql;
-                if (consulta == null)
-                {
-                    sql = "SELECT id_productos, codigo,descripcion,precio,fecha FROM productos";
-                }
-                else
-                {
-                    sql = "SELECT id_productos, codigo,descripcion,precio,fecha FROM productos " +
-                        "WHERE codigo LIKE @consulta OR descripcion LIKE @consulta";
-
-                }
-
-                string searchTerm = string.Format("%{0}%", consulta);
-
-
-                //Command.Parameters.Add(new SqlParameter("@name", searchTerm));
-
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@consulta", searchTerm);
+                string sql;                
+                sql = @"select idsintomas as id, nombre as nombre 
+                        from sintomas
+                        order by idsintomas asc";                               
+                MySqlCommand comando = new MySqlCommand(sql, conexion);                
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
 
-                        string id = reader.GetString(0);
-                        /*string codigo = (reader[1] != DBNull.Value) ? reader.GetString(1) : ""; ;
-                        if (reader[1] != DBNull.Value)
-                        {
-                            string codigo = reader.GetString(1)
-                        }
-                        else
-                        {
-                            codigo = "";
-                        }*/
-
-                        /*string codigo = (reader[1] != DBNull.Value) ? reader.GetString(1) : ""; ;
-                        string descripcion = (reader[2] != DBNull.Value) ? reader.GetString(2) : "";
-                        string precio = (reader[3] != DBNull.Value) ? reader.GetString(3) : "0";
-                        string fecha = (reader[4] != DBNull.Value) ? reader.GetString(4) : "1/1/2000 0:00:00";
-                        ProductoEntidad prod = new ProductoEntidad
-                        {
-                            Id_productos = long.Parse(id),
-                            Codigo = codigo,
-                            Descripcion = descripcion,
-                            Precio = float.Parse(precio)
-                        };
-                        DateTime fechaD = DateTime.ParseExact(fecha, "d/M/yyyy H:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-                        prod.Fecha = fechaD;
-                        list.Add(prod);
+                        //string s = reader.GetNameGet["id"];
+                        string id = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0"; ;
+                        string sintoma = (reader[1] != DBNull.Value) ? reader.GetString(1) : "";
+                        long idLong = long.Parse(id);
+                        DTSintoma sintomadata = new DTSintoma(idLong, sintoma);                                                                      
+                        list.Add(sintomadata);
                     }
                 }
 
@@ -145,8 +113,12 @@ namespace _3_Persistencia
                 {
                     conexion.Close();
                 }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
             }
             return list;
-        }*/
+        }
     }//end class
 }//end namespace

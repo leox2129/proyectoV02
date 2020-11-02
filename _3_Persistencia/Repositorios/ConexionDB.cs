@@ -21,7 +21,7 @@ namespace _3_Persistencia
         public static MySqlConnection GetConexion()
         {
             //string cadenaConexion = "Database=prueba; Data Source=localhost; Port=3306; User Id=usuario26; Password=usuario26";
-            string cadenaConexion = "Database=prueba; Data Source=localhost; Port=3306; User Id=root; Password=admin";
+            string cadenaConexion = "Database=base02; Data Source=localhost; Port=3306; User Id=root; Password=admin";
             MySqlConnection conexion = null;
             try
             {

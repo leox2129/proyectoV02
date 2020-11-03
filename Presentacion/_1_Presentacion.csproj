@@ -62,6 +62,12 @@
     <Compile Include="Formularios\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AgregarPatologiaNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarPatologiaNuevo.Designer.cs">
+      <DependentUpon>AgregarPatologiaNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AgregarSintoma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <EmbeddedResource Include="Formularios\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregarPatologiaNuevo.resx">
+      <DependentUpon>AgregarPatologiaNuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarSintoma.resx">
       <DependentUpon>AgregarSintoma.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,7 @@
     </Compile>
     <None Include="Properties\DataSources\Negocio.Objetos.DataProducto.datasource" />
     <None Include="Properties\DataSources\Negocio.Objetos.DataUsuario.datasource" />
+    <None Include="Properties\DataSources\_4_TipoDeDato.DTPatologia.datasource" />
     <None Include="Properties\DataSources\_4_TipoDeDato.DTSintoma.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

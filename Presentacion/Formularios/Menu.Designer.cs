@@ -42,6 +42,7 @@
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.btnPatologia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestau)).BeginInit();
@@ -169,6 +170,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MenuVertical.Controls.Add(this.btnPatologia);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.btnAgregarProducto);
             this.MenuVertical.Controls.Add(this.btConsulta);
@@ -198,6 +200,20 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.PanelContenedor.TabIndex = 6;
+            // 
+            // btnPatologia
+            // 
+            this.btnPatologia.FlatAppearance.BorderSize = 0;
+            this.btnPatologia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPatologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatologia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPatologia.Location = new System.Drawing.Point(0, 294);
+            this.btnPatologia.Name = "btnPatologia";
+            this.btnPatologia.Size = new System.Drawing.Size(220, 27);
+            this.btnPatologia.TabIndex = 5;
+            this.btnPatologia.Text = "Agregar patologia";
+            this.btnPatologia.UseVisualStyleBackColor = true;
+            this.btnPatologia.Click += new System.EventHandler(this.btnPatologia_Click);
             // 
             // Menu
             // 
@@ -237,5 +253,6 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximisar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPatologia;
     }
 }

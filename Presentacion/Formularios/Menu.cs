@@ -92,6 +92,12 @@ namespace Presentacion.Formularios
         {
             Application.Exit();
         }
+
+        private void btnPatologia_Click(object sender, EventArgs e)
+        {
+            AgregarPatologiaNuevo forpato = new AgregarPatologiaNuevo();
+            forpato.Show();
+         }
     }
 }
 

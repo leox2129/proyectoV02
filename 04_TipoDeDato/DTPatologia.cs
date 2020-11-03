@@ -5,26 +5,27 @@ using System.Text;
 
 namespace _4_TipoDeDato
 {
-    class DTPatologia
+    public class DTPatologia
     {
         private long id;
-        private long gravedad;
+        private int gravedad;
         private string nombre;
 
-        public DTPatologia(long id,long gravedad)
+        public DTPatologia(long id,int gravedad)
         {
             this.id = id;
-            this.gravedad = gravedad;
+            this.Gravedad = gravedad;
         }
 
-        public DTPatologia(long id, long gravedad, string nombre)
+        public DTPatologia(long id, int gravedad, string nombre)
         {
             this.id = id;
-            this.gravedad = gravedad;
+            this.Gravedad = gravedad;
             this.nombre = nombre;
         }
         public long Id { get => id; set => id = value; }
-        public long Gravedad { get => gravedad; set => gravedad = value; }       
+       
         public string Nombre { get => nombre; set => nombre = value; }
+        public int Gravedad { get => gravedad; set => gravedad = value; }
     }
 }

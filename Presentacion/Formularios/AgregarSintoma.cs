@@ -48,7 +48,6 @@ namespace Presentacion.Formularios
                 catch (Exception)
                 {
                     MessageBox.Show(errores);
-
                 }
             }
         }

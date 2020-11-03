@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\AgregarPatologia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarPatologia.Designer.cs">
+      <DependentUpon>AgregarPatologia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="Formularios\AgregarSintoma.Designer.cs">
       <DependentUpon>AgregarSintoma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Chat.cs">
       <SubType>Form</SubType>
@@ -102,11 +114,17 @@
     <Compile Include="Variables\Enum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\AgregarPatologia.resx">
+      <DependentUpon>AgregarPatologia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarSintoma.resx">
       <DependentUpon>AgregarSintoma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>

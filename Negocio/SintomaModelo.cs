@@ -34,6 +34,27 @@ namespace Negocio
             list = persistencia.ListarSintomas();
             return list;
         }
+        public string calcularPatologia(List<DTSintoma>sintomas) {
+            return "hola";
+            /*
+            obtener patologia List<DtPatologia> listPatologia;
+            string sintoma = "";ponderacionPatMAx=0
+                foreach (var patologia in listPatologia)
+            {
+                patologiaId = patologiaId;
+                patologiaRepo patrep = new patologiaRepo();
+                dicPatologia = patrep.obtenerSintomapat(patologiaId);
+                ponderacionAux = 0;
+                foreach (var sintoma in sintomasList)
+                    if (dicPatologia)
+                    {
+
+                    }
+                {
+
+                }
+            }*/
+        }
 
         public long Agregar()
         {

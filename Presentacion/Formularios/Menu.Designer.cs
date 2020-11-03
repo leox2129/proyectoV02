@@ -40,9 +40,10 @@
             this.btnMaximisar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnPatologia = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.btnPatologia = new System.Windows.Forms.Button();
+            this.btnSintopato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestau)).BeginInit();
@@ -170,6 +171,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MenuVertical.Controls.Add(this.btnSintopato);
             this.MenuVertical.Controls.Add(this.btnPatologia);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.btnAgregarProducto);
@@ -180,6 +182,20 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 615);
             this.MenuVertical.TabIndex = 5;
+            // 
+            // btnPatologia
+            // 
+            this.btnPatologia.FlatAppearance.BorderSize = 0;
+            this.btnPatologia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPatologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatologia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPatologia.Location = new System.Drawing.Point(0, 294);
+            this.btnPatologia.Name = "btnPatologia";
+            this.btnPatologia.Size = new System.Drawing.Size(220, 27);
+            this.btnPatologia.TabIndex = 5;
+            this.btnPatologia.Text = "Agregar patologia";
+            this.btnPatologia.UseVisualStyleBackColor = true;
+            this.btnPatologia.Click += new System.EventHandler(this.btnPatologia_Click);
             // 
             // pictureBox1
             // 
@@ -201,19 +217,19 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.PanelContenedor.TabIndex = 6;
             // 
-            // btnPatologia
+            // btnSintopato
             // 
-            this.btnPatologia.FlatAppearance.BorderSize = 0;
-            this.btnPatologia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnPatologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPatologia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPatologia.Location = new System.Drawing.Point(0, 294);
-            this.btnPatologia.Name = "btnPatologia";
-            this.btnPatologia.Size = new System.Drawing.Size(220, 27);
-            this.btnPatologia.TabIndex = 5;
-            this.btnPatologia.Text = "Agregar patologia";
-            this.btnPatologia.UseVisualStyleBackColor = true;
-            this.btnPatologia.Click += new System.EventHandler(this.btnPatologia_Click);
+            this.btnSintopato.FlatAppearance.BorderSize = 0;
+            this.btnSintopato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSintopato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSintopato.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSintopato.Location = new System.Drawing.Point(3, 327);
+            this.btnSintopato.Name = "btnSintopato";
+            this.btnSintopato.Size = new System.Drawing.Size(220, 27);
+            this.btnSintopato.TabIndex = 6;
+            this.btnSintopato.Text = "Agregar Sintomas a patologia ";
+            this.btnSintopato.UseVisualStyleBackColor = true;
+            this.btnSintopato.Click += new System.EventHandler(this.btnSintopato_Click);
             // 
             // Menu
             // 
@@ -254,5 +270,6 @@
         private System.Windows.Forms.PictureBox btnMaximisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPatologia;
+        private System.Windows.Forms.Button btnSintopato;
     }
 }

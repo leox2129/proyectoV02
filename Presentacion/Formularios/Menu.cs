@@ -98,6 +98,13 @@ namespace Presentacion.Formularios
             AgregarPatologiaNuevo forpato = new AgregarPatologiaNuevo();
             forpato.Show();
          }
+
+        private void btnSintopato_Click(object sender, EventArgs e)
+        {
+            SintomaPatologia sintopato = new SintomaPatologia();
+            sintopato.Show();
+
+        }
     }
 }
 

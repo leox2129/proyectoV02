@@ -9,24 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using _4_TipoDeDato;
 using Negocio;
 using Negocio.Objetos;
 
 
 namespace Presentacion.Formularios
 {
-    public partial class Form2 : Form
+    public partial class SintomaPatologia : Form
     {
         
         private int v = 0;
         private int y = 20;      
         const int altura = 25;
         //lista sintomas de la enfermedad
-        List<DataSintoma> list;
+        List<DTSintoma> list;
         //lista de todos los sintomas.
-        List<DataSintoma> listasintomas;
+        List<DTSintoma> listasintomas;
         private int indice = -1;        
-        public Form2()
+        public SintomaPatologia()
         {
             InitializeComponent();
             Initcombox();
@@ -36,16 +37,25 @@ namespace Presentacion.Formularios
         private void Initcombox()
         {
             
-            DataSintoma ds1 = new DataSintoma(1, "tos", 40.0);            
-            DataSintoma ds2 = new DataSintoma(2, "gripe", 30.0);                       
-            DataSintoma ds3 = new DataSintoma(3, "malestar", 20.0);
-            this.listasintomas = new List<DataSintoma>();            
+            /*DTSintoma ds1 = new DTSintoma(1, "tos", 40.0);            
+            DTSintoma ds2 = new DTSintoma(2, "gripe", 30.0);                       
+            DTSintoma ds3 = new DTSintoma(3, "malestar", 20.0);*/
+            SintomaModelo sintomaModelo = new SintomaModelo();
+            //tiene todos los sintomas
+            this.listasintomas = sintomaModelo.ListarSintomas();
+
+            //esta carga los sintomasPatologia de la base de datos
+            this.list = new List<DTSintoma>();
+
+
+            /*this.listasintomas = new List<DTSintoma>();            
             this.listasintomas.Add(ds1);
             this.listasintomas.Add(ds2);
             this.listasintomas.Add(ds3);
-            this.list = new List<DataSintoma>();
+            this.list = new List<DTSintoma>();
             this.list.Add(ds1);            
-            this.list.Add(ds2);            
+            this.list.Add(ds2);*/
+
             cmbsintomas.DataSource = this.listasintomas;
             cmbsintomas.ValueMember = "id";
             cmbsintomas.DisplayMember = "sintoma";
@@ -168,15 +178,15 @@ namespace Presentacion.Formularios
             bool encontrado = false;
             int cantidad = this.list.Count;
             int iter = 0;
-            List<DataSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
+            List<DTSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
             while (!encontrado)
             {
                 if (this.list[iter].Id==id)
                 {
 
                     encontrado = true;
-                    double heightVal = 0;
-                    double.TryParse(coef, out heightVal);
+                    int heightVal = 0;
+                    int.TryParse(coef, out heightVal);
                     if (heightVal != 0)
                     {
                         this.list[iter].Coef = heightVal;                       
@@ -213,10 +223,10 @@ namespace Presentacion.Formularios
                     iter++;
                 }*/
                 long id = this.listasintomas[indice].Id;
-                DataSintoma sintomaData = this.listasintomas[indice];
+                DTSintoma sintomaData = this.listasintomas[indice];
                 string sintoma = this.listasintomas[indice].Sintoma;
                 MessageBox.Show("id:" + id + " el sintoma es: " + sintoma);
-                List<DataSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
+                List<DTSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
                 if (listaAux.Count==0)
                 {
                     this.list.Add(sintomaData);

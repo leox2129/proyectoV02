@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class Form2
+    partial class SintomaPatologia
     {
         /// <summary>
         /// Required designer variable.

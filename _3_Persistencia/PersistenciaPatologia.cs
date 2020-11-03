@@ -43,8 +43,10 @@ namespace _3_Persistencia
             return idsintoma;
         }//end agregar patologia
 
-        public List<DTPatologia> ListarSintomas()
-        {
+        
+
+    public List<DTPatologia> ListarPatologia()
+    {
             List<DTPatologia> list = new List<DTPatologia>();
             MySqlConnection conexion = null;
             MySqlDataReader reader = null;

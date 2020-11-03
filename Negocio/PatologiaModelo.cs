@@ -31,7 +31,7 @@ namespace Negocio
         {
 
             List<DTPatologia> list = new List<DTPatologia>();
-            PersistenciaSintoma persistencia = new PersistenciaSintoma();
+            PersistenciaPatologia persistencia = new PersistenciaPatologia();
             list = persistencia.ListarPatologia();
             return list;
         }

@@ -86,6 +86,12 @@
     <Compile Include="Formularios\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Sintoma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Sintoma.resx">
       <DependentUpon>Sintoma.cs</DependentUpon>

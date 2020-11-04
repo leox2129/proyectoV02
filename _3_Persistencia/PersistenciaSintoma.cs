@@ -52,23 +52,14 @@ namespace _3_Persistencia
                 comando.Parameters.AddWithValue("@idpat", idPatologia);
                 comando.ExecuteNonQuery();
                 sql = @"insert into sintomapatologia
-                           (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idsintoma, @idsintoma)";
+                           (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idpatologia, @coef)";
                 foreach (DTSintoma item in list)
                 {
-                    comando.Parameters.AddWithValue("@idpat", idPatologia);
-
-
+                    comando.Parameters.AddWithValue("@idsintoma", item.Id);
+                    comando.Parameters.AddWithValue("@idpatologia", idPatologia);
+                    comando.Parameters.AddWithValue("@coef", item.Coef);
+                    comando.ExecuteNonQuery();
                 }
-
-
-
-
-                string sql = "insert into sintomas (nombre) values (@nombre)";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@nombre", nombreSintoma);
-                comando.ExecuteNonQuery();
-                //obtiene el ultimo id ingresado
-                //idsintoma = comando.LastInsertedId;
             }
             catch (MySqlException ex)
             {

@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Negocio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Negocio">
       <HintPath>..\Negocio\bin\Debug\netstandard2.0\Negocio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -48,6 +47,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="_4_TipoDeDato">
+      <HintPath>..\_4_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Formularios\AgregarPatologia.cs">
@@ -187,12 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\04_TipoDeDato\_4_TipoDeDato.csproj">
-      <Project>{29E7E4CE-6A41-4835-8F5D-774704D397C1}</Project>
-      <Name>_4_TipoDeDato</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

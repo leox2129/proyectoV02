@@ -105,6 +105,8 @@ namespace Presentacion.Formularios
             sintopato.Show();
 
         }
+
+        
     }
 }
 

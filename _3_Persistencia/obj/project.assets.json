@@ -25,16 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "_4_TipoDeDato/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/_4_TipoDeDato.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/_4_TipoDeDato.dll": {}
-        }
       }
     }
   },
@@ -182,17 +172,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "_4_TipoDeDato/1.0.0": {
-      "type": "project",
-      "path": "../04_TipoDeDato/_4_TipoDeDato.csproj",
-      "msbuildProject": "../04_TipoDeDato/_4_TipoDeDato.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3",
-      "_4_TipoDeDato >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -220,11 +204,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\04_TipoDeDato\\_4_TipoDeDato.csproj": {
-              "projectPath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\04_TipoDeDato\\_4_TipoDeDato.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

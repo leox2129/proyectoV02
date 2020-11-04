@@ -1,19 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\04_TipoDeDato\_4_TipoDeDato.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="_4_TipoDeDato">
-      <HintPath>..\04_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.dll</HintPath>
+      <HintPath>..\_4_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.dll</HintPath>
     </Reference>
   </ItemGroup>
 

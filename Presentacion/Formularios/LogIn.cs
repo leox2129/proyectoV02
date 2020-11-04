@@ -24,10 +24,7 @@ namespace Presentacion.Formularios
             //UG = new GestionUsuario();
         }
 
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-     
-        }
+
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {            
@@ -53,7 +50,7 @@ namespace Presentacion.Formularios
             }
             else
             {
-                Usuario usuario = new Usuario();
+                UsuarioModelo usuario = new UsuarioModelo();
                 int idUsuario = usuario.ObtenerUsuario(usuarioNombre, usuarioPasword, Variables.Globales.nombrePrograma);
                 if (idUsuario >= 1) 
                 {
@@ -135,6 +132,11 @@ namespace Presentacion.Formularios
             {
                 MessageBox.Show("Nombre de Usuario no puede ser nulo");
             }*/
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

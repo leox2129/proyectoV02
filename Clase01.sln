@@ -3,18 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_4_TipoDeDato", "04_TipoDeDato\_4_TipoDeDato.csproj", "{29E7E4CE-6A41-4835-8F5D-774704D397C1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Negocio", "Negocio\Negocio.csproj", "{A6ECE11D-8564-4359-A45A-1FDFB8A236E7}"
 	ProjectSection(ProjectDependencies) = postProject
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A} = {ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}
 		{148D5C36-D2CA-47C5-9B2A-ED8D737B5598} = {148D5C36-D2CA-47C5-9B2A-ED8D737B5598}
-		{29E7E4CE-6A41-4835-8F5D-774704D397C1} = {29E7E4CE-6A41-4835-8F5D-774704D397C1}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_3_Persistencia", "_3_Persistencia\_3_Persistencia.csproj", "{148D5C36-D2CA-47C5-9B2A-ED8D737B5598}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A} = {ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_1_Presentacion", "Presentacion\_1_Presentacion.csproj", "{D2331543-7E4F-49AF-8609-3207CE747748}"
 	ProjectSection(ProjectDependencies) = postProject
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A} = {ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}
+		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7} = {A6ECE11D-8564-4359-A45A-1FDFB8A236E7}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_4_TipoDeDato", "_4_TipoDeDato\_4_TipoDeDato.csproj", "{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios", "Usuarios\Usuarios.csproj", "{CE33B085-7115-4250-8591-BC5C245290CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A} = {ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}
+		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7} = {A6ECE11D-8564-4359-A45A-1FDFB8A236E7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicos", "Medicos\Medicos.csproj", "{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A} = {ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}
 		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7} = {A6ECE11D-8564-4359-A45A-1FDFB8A236E7}
 	EndProjectSection
 EndProject
@@ -24,10 +40,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29E7E4CE-6A41-4835-8F5D-774704D397C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29E7E4CE-6A41-4835-8F5D-774704D397C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29E7E4CE-6A41-4835-8F5D-774704D397C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29E7E4CE-6A41-4835-8F5D-774704D397C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,6 +52,18 @@ Global
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2331543-7E4F-49AF-8609-3207CE747748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE0DD1D-C86D-462F-8A1D-48D77D11F88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE33B085-7115-4250-8591-BC5C245290CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE33B085-7115-4250-8591-BC5C245290CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE33B085-7115-4250-8591-BC5C245290CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE33B085-7115-4250-8591-BC5C245290CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

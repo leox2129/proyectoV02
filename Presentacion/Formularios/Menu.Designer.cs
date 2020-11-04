@@ -40,10 +40,10 @@
             this.btnMaximisar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnSintopato = new System.Windows.Forms.Button();
             this.btnPatologia = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.btnSintopato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestau)).BeginInit();
@@ -182,6 +182,21 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 615);
             this.MenuVertical.TabIndex = 5;
+
+            // 
+            // btnSintopato
+            // 
+            this.btnSintopato.FlatAppearance.BorderSize = 0;
+            this.btnSintopato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSintopato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSintopato.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSintopato.Location = new System.Drawing.Point(3, 327);
+            this.btnSintopato.Name = "btnSintopato";
+            this.btnSintopato.Size = new System.Drawing.Size(220, 27);
+            this.btnSintopato.TabIndex = 6;
+            this.btnSintopato.Text = "Agregar Sintomas a patologia ";
+            this.btnSintopato.UseVisualStyleBackColor = true;
+            this.btnSintopato.Click += new System.EventHandler(this.btnSintopato_Click);
             // 
             // btnPatologia
             // 
@@ -216,20 +231,6 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.PanelContenedor.TabIndex = 6;
-            // 
-            // btnSintopato
-            // 
-            this.btnSintopato.FlatAppearance.BorderSize = 0;
-            this.btnSintopato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSintopato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSintopato.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSintopato.Location = new System.Drawing.Point(3, 327);
-            this.btnSintopato.Name = "btnSintopato";
-            this.btnSintopato.Size = new System.Drawing.Size(220, 27);
-            this.btnSintopato.TabIndex = 6;
-            this.btnSintopato.Text = "Agregar Sintomas a patologia ";
-            this.btnSintopato.UseVisualStyleBackColor = true;
-            this.btnSintopato.Click += new System.EventHandler(this.btnSintopato_Click);
             // 
             // Menu
             // 

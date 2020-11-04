@@ -11,7 +11,6 @@ using System.Web;
 using System.Windows.Forms;
 using _4_TipoDeDato;
 using Negocio;
-using Negocio.Objetos;
 
 
 namespace Presentacion.Formularios

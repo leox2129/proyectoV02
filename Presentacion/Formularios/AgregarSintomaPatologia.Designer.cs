@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class AgregarSintoma
+    partial class AgregarSintomaPatologia
     {
         /// <summary>
         /// Required designer variable.

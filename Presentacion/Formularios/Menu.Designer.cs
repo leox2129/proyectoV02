@@ -182,7 +182,6 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 615);
             this.MenuVertical.TabIndex = 5;
-
             // 
             // btnSintopato
             // 

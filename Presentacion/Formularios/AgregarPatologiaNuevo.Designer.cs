@@ -39,6 +39,7 @@
             this.btnAgregarPatologia = new System.Windows.Forms.Button();
             this.txtGravedad = new System.Windows.Forms.TextBox();
             this.lblGravedad = new System.Windows.Forms.Label();
+            this.btnAgregarSintoma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatologia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTPatologiaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -131,11 +132,22 @@
             this.lblGravedad.TabIndex = 6;
             this.lblGravedad.Text = "Gravedad";
             // 
+            // btnAgregarSintoma
+            // 
+            this.btnAgregarSintoma.Location = new System.Drawing.Point(443, 21);
+            this.btnAgregarSintoma.Name = "btnAgregarSintoma";
+            this.btnAgregarSintoma.Size = new System.Drawing.Size(95, 24);
+            this.btnAgregarSintoma.TabIndex = 7;
+            this.btnAgregarSintoma.Text = "Agregar Sintoma";
+            this.btnAgregarSintoma.UseVisualStyleBackColor = true;
+            this.btnAgregarSintoma.Click += new System.EventHandler(this.btnAgregarSintoma_Click);
+            // 
             // AgregarPatologiaNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAgregarSintoma);
             this.Controls.Add(this.lblGravedad);
             this.Controls.Add(this.txtGravedad);
             this.Controls.Add(this.btnAgregarPatologia);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.BindingSource dTPatologiaBindingSource;
         private System.Windows.Forms.TextBox txtGravedad;
         private System.Windows.Forms.Label lblGravedad;
+        private System.Windows.Forms.Button btnAgregarSintoma;
     }
 }

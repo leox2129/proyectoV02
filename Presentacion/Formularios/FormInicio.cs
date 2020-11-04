@@ -75,8 +75,8 @@ namespace Presentacion.Formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Form form = new AgregarProducto(Modo.Agregar);
-            form.Show();
+            /*Form form = new AgregarProducto(Modo.Agregar);
+            form.Show();*/
         }
 
         /*private void btnAgregar_Click(object sender, EventArgs e)

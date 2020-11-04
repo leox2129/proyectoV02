@@ -25,13 +25,21 @@ namespace Presentacion.Formularios
         List<DTSintoma> list;
         //lista de todos los sintomas.
         List<DTSintoma> listasintomas;
-        private int indice = -1;        
+        private int indice = -1;
+        private long idPatologia;
+
         public SintomaPatologia()
         {
             InitializeComponent();
             Initcombox();
         }
-        
+
+        public SintomaPatologia(long idPatologia)
+        {
+            InitializeComponent();
+            Initcombox();
+            this.idPatologia = idPatologia;
+        }
 
         private void Initcombox()
         {

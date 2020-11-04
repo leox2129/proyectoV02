@@ -14,10 +14,11 @@ namespace Presentacion.Formularios
 {
     public partial class AgregarPatologiaNuevo : Form
     {
+       
         public AgregarPatologiaNuevo()
         {
             InitializeComponent();
-            InitDataGrid();            
+            InitDataGrid();
         }
 
         private void InitDataGrid()
@@ -91,6 +92,39 @@ namespace Presentacion.Formularios
         private void AgregarPatologiaNuevo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregarSintoma_Click(object sender, EventArgs e)
+        {
+            //llar al formulario para agregar los sintomas a una patologiaP
+            /*long varlong = 120;
+            int varint = (int)varlong;*/
+            int indice = -1;
+            long idPatologia = -1;
+            try
+            {
+                indice = dgvPatologia.CurrentRow.Index;
+
+                
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Seleccione un Patologia a editar");
+            }            
+            if (indice > -1)
+            {
+                DataGridViewRow fila = dgvPatologia.CurrentRow;
+
+                idPatologia = (long) fila.Cells[0].Value;
+                SintomaPatologia formSintoma = new SintomaPatologia(idPatologia);
+                //Agregarsin nuevo = new AgregarPatologiaNuevo(idSintoma);
+                formSintoma.Show();
+            }
+                //DataProducto prod = new DataProducto();
+                
         }
     }
 }

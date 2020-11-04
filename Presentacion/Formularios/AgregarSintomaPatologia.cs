@@ -11,13 +11,17 @@ using Negocio;
 
 namespace Presentacion.Formularios
 {
-    public partial class AgregarSintoma : Form
+    public partial class AgregarSintomaPatologia : Form
     {
-        public AgregarSintoma()
+        
+        public AgregarSintomaPatologia()
         {
             InitializeComponent();
             InitDataGrid();
         }
+
+        
+        
 
         private void InitDataGrid()
         {

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ifU3qRrH0Xbifdaj9lOaHs1Ds6oef9sYrtRNrF9W/Rtryj79nI5MWX8qaVifUpqnofpd8e0ne/AHoaWN0lmJSA==",
+  "dgSpecHash": "EC61dL1O0nTYWVGa6i9LGqaUWXHGU4bkCWEnPMW8bHzC19vZ+vMoquTbpMreaBaqcHjJLlgrEP+H2WQaqHQEqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\_3_Persistencia.csproj",
+  "projectFilePath": "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\_3_Persistencia.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\equipo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\equipo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\leandro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\leandro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -40,31 +40,40 @@ namespace _3_Persistencia
         }
 
         public void AgregarSintomaPatologia(List<DTSintoma> list, long idPatologia)
-        {
+        {            
+            //long idsintoma = 0;
             MySqlConnection conexion = null;
-            long idsintoma = 0;
+            MySqlTransaction trans = null;
             try
             {
+
                 conexion = ConexionDB.GetConexion();
-                conexion.Open();
-                string sql = "delete from sintomapatologia where idpatologia=@idpat";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                conexion.Open();                
+                string sql = "insert into productos (codigo, descripcion,precio,fecha) values " +
+                        "(@codigo, @descripcion, @precio, @fecha)";                
+                trans = conexion.BeginTransaction();
+                MySqlCommand comando = new MySqlCommand(sql, conexion);                
+                sql = "delete from sintomapatologia where idpatologia=@idpat";
+                comando = new MySqlCommand(sql, conexion);
                 comando.Parameters.AddWithValue("@idpat", idPatologia);
                 comando.ExecuteNonQuery();
                 sql = @"insert into sintomapatologia
                            (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idpatologia, @coef)";
                 foreach (DTSintoma item in list)
                 {
+                    comando.Parameters.Clear();
                     comando.Parameters.AddWithValue("@idsintoma", item.Id);
                     comando.Parameters.AddWithValue("@idpatologia", idPatologia);
                     comando.Parameters.AddWithValue("@coef", item.Coef);
                     comando.ExecuteNonQuery();
                 }
+                trans.Commit();
             }
             catch (MySqlException ex)
-            {
+            {                
                 string mensaje = ex.ToString();
                 Console.WriteLine("hola" + mensaje);
+                trans.Rollback();
             }
             finally
             {
@@ -72,6 +81,10 @@ namespace _3_Persistencia
                 {
                     conexion.Close();
                     conexion.Dispose();
+                }
+                if (trans != null)
+                {
+                    trans.Dispose();
                 }
             }            
         }

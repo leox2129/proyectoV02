@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicos", "Medicos\Medicos.
 		{A6ECE11D-8564-4359-A45A-1FDFB8A236E7} = {A6ECE11D-8564-4359-A45A-1FDFB8A236E7}
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistencia", "..\..\nnnnnn\ProyectoV02\Persistencia\Persistencia.csproj", "{75D122C7-506D-4283-A2FB-C715D271FFAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB2F3FE-EB8A-48AC-8005-FC45F61372B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D122C7-506D-4283-A2FB-C715D271FFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D122C7-506D-4283-A2FB-C715D271FFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D122C7-506D-4283-A2FB-C715D271FFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D122C7-506D-4283-A2FB-C715D271FFAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

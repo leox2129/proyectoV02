@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\_3_Persistencia.csproj": {}
+    "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\_3_Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\_3_Persistencia.csproj": {
+    "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\_3_Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\_3_Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\_3_Persistencia.csproj",
         "projectName": "_3_Persistencia",
-        "projectPath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\_3_Persistencia.csproj",
-        "packagesPath": "C:\\Users\\equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_3_Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\_3_Persistencia.csproj",
+        "packagesPath": "C:\\Users\\leandro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_3_Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -103,12 +103,7 @@ namespace Presentacion.Formularios
             long idPatologia = -1;
             try
             {
-                indice = dgvPatologia.CurrentRow.Index;
-
-                
-
-
-
+                indice = dgvPatologia.CurrentRow.Index;                
             }
             catch
             {

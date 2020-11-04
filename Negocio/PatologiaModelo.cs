@@ -23,9 +23,16 @@ namespace Negocio
             this.gravedad = gravedadPatologiaInt;
         }
 
+        public void AgregarSintomaPalogia(List<DTSintoma> list, long idPatologia)
+        {            
+            PersistenciaSintoma persistencia = new PersistenciaSintoma();
+            persistencia.AgregarSintomaPatologia(list, idPatologia);
+        }
+
         //public long Id { get => id; set => id = value; }
         public int Gravedad { get => gravedad; set => gravedad = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+
 
         public List<DTPatologia> ListarPatologias()
         {

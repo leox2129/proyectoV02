@@ -22,9 +22,9 @@ namespace Presentacion.Formularios
         private int y = 20;      
         const int altura = 25;
         //lista sintomas de la enfermedad
-        List<DTSintoma> list;
+        private List<DTSintoma> list;
         //lista de todos los sintomas.
-        List<DTSintoma> listasintomas;
+        private List<DTSintoma> listasintomas;
         private int indice = -1;
         private long idPatologia;
 
@@ -259,15 +259,11 @@ namespace Presentacion.Formularios
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnelim_Click(object sender, EventArgs e)
-        {
-            this.list.Clear();
-            EliminarSintomas();
+            
+            PatologiaModelo modelo = new PatologiaModelo();
+            modelo.AgregarSintomaPalogia(this.list, this.idPatologia);
         }
     }
 }

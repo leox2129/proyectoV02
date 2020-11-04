@@ -34,6 +34,9 @@ namespace Negocio
             list = persistencia.ListarSintomas();
             return list;
         }
+
+        
+
         public string calcularPatologia(List<DTSintoma>sintomas) {
             return "hola";
             /*

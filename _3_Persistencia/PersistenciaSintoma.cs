@@ -38,6 +38,52 @@ namespace _3_Persistencia
             }
             return idsintoma;
         }
+
+        public void AgregarSintomaPatologia(List<DTSintoma> list, long idPatologia)
+        {
+            MySqlConnection conexion = null;
+            long idsintoma = 0;
+            try
+            {
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                string sql = "delete from sintomapatologia where idpatologia=@idpat";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@idpat", idPatologia);
+                comando.ExecuteNonQuery();
+                sql = @"insert into sintomapatologia
+                           (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idsintoma, @idsintoma)";
+                foreach (DTSintoma item in list)
+                {
+                    comando.Parameters.AddWithValue("@idpat", idPatologia);
+
+
+                }
+
+
+
+
+                string sql = "insert into sintomas (nombre) values (@nombre)";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@nombre", nombreSintoma);
+                comando.ExecuteNonQuery();
+                //obtiene el ultimo id ingresado
+                //idsintoma = comando.LastInsertedId;
+            }
+            catch (MySqlException ex)
+            {
+                string mensaje = ex.ToString();
+                Console.WriteLine("hola" + mensaje);
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+            }            
+        }
         /*
         public void EditarProducto(ProductoEntidad entidad)
         {

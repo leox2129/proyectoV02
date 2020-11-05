@@ -232,7 +232,7 @@ namespace Presentacion.Formularios
                 long id = this.listasintomas[indice].Id;
                 DTSintoma sintomaData = this.listasintomas[indice];
                 string sintoma = this.listasintomas[indice].Sintoma;
-                MessageBox.Show("id:" + id + " el sintoma es: " + sintoma);
+                //MessageBox.Show("id:" + id + " el sintoma es: " + sintoma);
                 List<DTSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
                 if (listaAux.Count==0)
                 {

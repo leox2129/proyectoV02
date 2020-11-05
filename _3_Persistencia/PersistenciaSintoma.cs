@@ -82,7 +82,14 @@ namespace _3_Persistencia
                 sql = @"insert into sintomapatologia
                            (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idpatologia, @coef)";
                 comando = new MySqlCommand(sql, conexion);
-                trans = conexion.BeginTransaction();               
+                trans = conexion.BeginTransaction();
+                /*long longVar = 15;
+                int entero = 15;
+                if (longVar< int.MaxValue)
+                {
+                    entero = (int) longVar; 
+                }*/
+                //int.MaxValue;
                 foreach (DTSintoma item in list)
                 {
                     comando.Parameters.Clear();

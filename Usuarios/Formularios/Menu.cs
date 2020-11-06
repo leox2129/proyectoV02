@@ -110,7 +110,17 @@ namespace Usuarios.Formularios
 
         }
 
-        
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDiagnostico_Click(object sender, EventArgs e)
+        {
+            //llamar a formuario,
+            SintomaPatologia formulario = new SintomaPatologia();
+            formulario.Show();
+        }
     }
 }
 

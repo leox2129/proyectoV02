@@ -103,28 +103,20 @@ namespace Usuarios.Formularios
                 lbl2.Location = new Point(143, y);
                 lbl2.Text = item.Sintoma.ToString();
                 lbl2.Name = item.Sintoma.ToString();
-                lbl2.Tag = this.v;
-                TextBox txt1 = new TextBox();
-                txt1.Width = 100;
-                txt1.Height = 22;
-                txt1.Location = new Point(300, y);
-                txt1.Text = item.Coef.ToString();
-                txt1.Name = item.Coef.ToString();
-                txt1.Tag = this.v;
-                txt1.TextChanged += new EventHandler((sender1, e1) => Txt_TextChanged(sender1, e1, txt1.Text, item.Id));
+                
+                
 
                 Button btn = new Button();
                 btn.Location = new Point(460, y);
                 btn.Text = "Eliminar"+item.Id.ToString();
                 btn.Name = "Eliminar" + item.Id.ToString();
                 btn.Tag = this.v;
-                btn.Click += new EventHandler((sender1, e1) => btn_Click(sender1, e1, txt1.Text, item.Id));
+                btn.Click += new EventHandler((sender1, e1) => btn_Click(sender1, e1, item.Id));
                 //btn.Click += new EventHandler((sender1, e1) => Txt_TextChanged(sender1, e1, txt1.Text, item.Id));
 
                 //txt.TextChanged += Txt_TextChanged;
                 this.grsintomas.Controls.Add(lbl1);
-                this.grsintomas.Controls.Add(lbl2);
-                this.grsintomas.Controls.Add(txt1);
+                this.grsintomas.Controls.Add(lbl2);                
                 this.grsintomas.Controls.Add(btn);
                 //cuadro de ponderacion
                 //aumentar la y
@@ -133,7 +125,7 @@ namespace Usuarios.Formularios
             }
         }
 
-        private void btn_Click(object sender1, EventArgs e1, string text, long id)
+        private void btn_Click(object sender1, EventArgs e1, long id)
         {
             bool encontrado = false;
             int cantidad = this.list.Count;
@@ -154,47 +146,7 @@ namespace Usuarios.Formularios
             ListarSintomas();
         }
 
-        private void Txt_TextChanged(object sender, EventArgs e, string coef, long id )
-        {
-            
-
-            //throw new ArgumentOutOfRangeException("age", "All guests must be 21-years-old or older.");       
-            //this.list.Find(x => x.Id == id);
-            //sender.Text = "d";
-            //TextBox txtb = (TextBox)sender;
-            //txtb.Text = "1000";
-            bool encontrado = false;
-            int cantidad = this.list.Count;
-            int iter = 0;
-            List<DTSintoma> listaAux = this.list.Where(a => a.Id == id).ToList();
-            while (!encontrado)
-            {
-                if (this.list[iter].Id==id)
-                {
-
-                    encontrado = true;
-                    int heightVal = 0;
-                    int.TryParse(coef, out heightVal);
-                    if (heightVal != 0)
-                    {
-                        this.list[iter].Coef = heightVal;                       
-
-                    }
-                    else
-                    {
-                        //this.list[iter].Coef = double.Parse(coef);
-                        TextBox txtb = (TextBox)sender;
-                        txtb.Text = "0";
-
-                    }
-                    
-                    
-                }
-                iter++;
-            }            
-            //this.list[indice].Coef = coef;
-
-        }
+        
         //agregar
         private void button1_Click(object sender, EventArgs e)
         {
@@ -240,11 +192,18 @@ namespace Usuarios.Formularios
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnDiagnosticar_Click(object sender, EventArgs e)
         {
+            DiagnosticoModelo Diagnostio = new DiagnosticoModelo();
+            Diagnostio.CalcularPatologia(this.list);
             
+        }
+
+        /*private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            //calcular diagonostico
             PatologiaModelo modelo = new PatologiaModelo();
             modelo.AgregarSintomaPalogia(this.list, this.idPatologia);
-        }
+        }*/
     }
 }

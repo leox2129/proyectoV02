@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.grsintomas = new System.Windows.Forms.GroupBox();
+            this.lblpatologia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -90,11 +91,21 @@
             this.grsintomas.TabStop = false;
             this.grsintomas.Text = "sintomas";
             // 
+            // lblpatologia
+            // 
+            this.lblpatologia.AutoSize = true;
+            this.lblpatologia.Location = new System.Drawing.Point(314, 27);
+            this.lblpatologia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblpatologia.Name = "lblpatologia";
+            this.lblpatologia.Size = new System.Drawing.Size(0, 13);
+            this.lblpatologia.TabIndex = 5;
+            // 
             // SintomaPatologia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 530);
+            this.Controls.Add(this.lblpatologia);
             this.Controls.Add(this.grsintomas);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label1);
@@ -115,5 +126,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox grsintomas;
+        private System.Windows.Forms.Label lblpatologia;
     }
 }

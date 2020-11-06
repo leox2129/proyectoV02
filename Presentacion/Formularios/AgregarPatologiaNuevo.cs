@@ -114,7 +114,8 @@ namespace Presentacion.Formularios
                 DataGridViewRow fila = dgvPatologia.CurrentRow;
 
                 idPatologia = (long) fila.Cells[0].Value;
-                SintomaPatologia formSintoma = new SintomaPatologia(idPatologia);
+                string nombrePatologia = (string) fila.Cells[2].Value;
+                SintomaPatologia formSintoma = new SintomaPatologia(idPatologia, nombrePatologia);
                 //Agregarsin nuevo = new AgregarPatologiaNuevo(idSintoma);
                 formSintoma.Show();
             }

@@ -66,5 +66,13 @@ namespace Negocio
             idsintoma = persistencia.AgregarSintoma(this.nombreSintoma);
             return idsintoma;
         }
+
+        public List<DTSintoma> ListarSintomasPatologia(long idPatologia)
+        {
+            List<DTSintoma> list= new List<DTSintoma>();
+            PersistenciaSintoma persistencia = new PersistenciaSintoma();
+            list = persistencia.ListarSintomasPatologia(idPatologia);
+            return list;
+        }
     }
 }

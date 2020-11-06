@@ -55,28 +55,9 @@ namespace _3_Persistencia
                 sql = "delete from sintomapatologia where idpatologia=@idpat";
                 comando = new MySqlCommand(sql, conexion);
                 comando.Parameters.AddWithValue("@idpat", idPatologia);
-                comando.ExecuteNonQuery();
-                //cierro la conexion
+                comando.ExecuteNonQuery();                
                 conexion.Close();
                 conexion.Dispose();
-                //la abro con la transaccion
-
-
-
-
-                /*
-                conexion = ConexionDB.GetConexion();
-                conexion.Open();
-                string sql = "insert into productos (codigo, descripcion,precio,fecha) values " +
-                        "(@codigo, @descripcion, @precio, @fecha)";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                trans = conexion.BeginTransaction();*/
-
-
-
-
-
-
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();                
                 sql = @"insert into sintomapatologia
@@ -117,26 +98,49 @@ namespace _3_Persistencia
                 {
                     trans.Dispose();
                 }
-            }            
-        }
-        /*
-        public void EditarProducto(ProductoEntidad entidad)
+            }
+        }//AgregarSintomaPatologia
+
+        public List<DTSintoma> ListarSintomasPatologia(long idPatologia)
         {
+            //throw new NotImplementedException();
+            List<DTSintoma> list = new List<DTSintoma>();
             MySqlConnection conexion = null;
+            MySqlDataReader reader = null;
+            int idPatologiaInt= 0;
+            if (idPatologia<int.MaxValue)
+            {
+                idPatologiaInt = (int)idPatologia;
+            }
             try
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-
-                string sql = "UPDATE productos SET codigo=@codigo, descripcion=@descripcion, " +
-                    "precio= @precio, fecha= @fecha WHERE id_productos= @id";
+                string sql;
+                sql = @"SELECT sp.idsintomas, sin.nombre, sp.coeficiente 
+                        FROM sintomapatologia as sp 
+                        inner join sintomas as sin
+                        on sin.idsintomas = sp.idsintomas 
+                        where sp.idpatologia=@idpatologia;";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@codigo", entidad.Codigo);
-                comando.Parameters.AddWithValue("@descripcion", entidad.Descripcion);
-                comando.Parameters.AddWithValue("@precio", entidad.Precio);
-                comando.Parameters.AddWithValue("@fecha", entidad.Fecha);
-                comando.Parameters.AddWithValue("@id", entidad.Id_productos);
-                comando.ExecuteNonQuery();
+                comando.Parameters.AddWithValue("@idpatologia", idPatologiaInt);
+                reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        
+                        string idstring = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0";
+                        string sintomastring = (reader[1] != DBNull.Value) ? reader.GetString(1) : "";
+                        string coeficiente = (reader[2] != DBNull.Value) ? reader.GetString(2) : "0";
+                        long idLong = long.Parse(idstring);
+                        long idSinomaLong = long.Parse(idstring);
+                        double sintomaDouble = double.Parse(coeficiente);
+                        DTSintoma sintomadata = new DTSintoma(idSinomaLong,sintomastring, sintomaDouble);
+                        list.Add(sintomadata);
+                    }
+                }
+
             }
             catch (MySqlException ex)
             {
@@ -149,8 +153,15 @@ namespace _3_Persistencia
                 {
                     conexion.Close();
                 }
+                if (reader != null)
+                {
+                    reader.Close();
+                }
             }
-        }*/
+            return list;
+        }//end ListarSintomasPatologia
+
+
 
         public List<DTSintoma> ListarSintomas()
         {
@@ -200,6 +211,6 @@ namespace _3_Persistencia
                 }
             }
             return list;
-        }
+        }// endListarSintomas
     }//end class
 }//end namespace

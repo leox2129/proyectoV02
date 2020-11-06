@@ -15,6 +15,8 @@ namespace _4_TipoDeDato
         {
             this.id = id;
             this.sintoma = sintoma;
+            this.coef = 0;
+            this.peligro = 0;
         }
 
         public DTSintoma(long id, string sintoma, double coef)
@@ -22,6 +24,7 @@ namespace _4_TipoDeDato
             this.id = id;
             this.Sintoma = sintoma;
             this.coef = coef;
+            this.peligro = 0;
         }
         
         public long Id { get => id; set => id = value; }        

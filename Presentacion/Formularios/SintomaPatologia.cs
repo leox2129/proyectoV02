@@ -27,6 +27,7 @@ namespace Presentacion.Formularios
         private List<DTSintoma> listasintomas;
         private int indice = -1;
         private long idPatologia;
+        private string nombrePatologia;
 
         public SintomaPatologia()
         {
@@ -41,27 +42,31 @@ namespace Presentacion.Formularios
             this.idPatologia = idPatologia;
         }
 
+        public SintomaPatologia(long idPatologia, string nombrePatologia) 
+        {
+            InitializeComponent();
+            this.idPatologia = idPatologia;
+            this.nombrePatologia = nombrePatologia;
+            Initcombox();            
+            lblpatologia.Text = nombrePatologia;
+        }
+
         private void Initcombox()
         {
             
-            /*DTSintoma ds1 = new DTSintoma(1, "tos", 40.0);            
-            DTSintoma ds2 = new DTSintoma(2, "gripe", 30.0);                       
-            DTSintoma ds3 = new DTSintoma(3, "malestar", 20.0);*/
+          
             SintomaModelo sintomaModelo = new SintomaModelo();
-            //tiene todos los sintomas
+          
             this.listasintomas = sintomaModelo.ListarSintomas();
 
             //esta carga los sintomasPatologia de la base de datos
-            this.list = new List<DTSintoma>();
+            this.list = sintomaModelo.ListarSintomasPatologia(this.idPatologia);
+
+            //this.list = new List<DTSintoma>();
 
 
-            /*this.listasintomas = new List<DTSintoma>();            
-            this.listasintomas.Add(ds1);
-            this.listasintomas.Add(ds2);
-            this.listasintomas.Add(ds3);
-            this.list = new List<DTSintoma>();
-            this.list.Add(ds1);            
-            this.list.Add(ds2);*/
+
+            
 
             cmbsintomas.DataSource = this.listasintomas;
             cmbsintomas.ValueMember = "id";
@@ -77,31 +82,7 @@ namespace Presentacion.Formularios
         {
             this.grsintomas.Controls.Clear();
         }
-    /*private void EliminarSintomas()
-        {
-            foreach (Control item in Controls)
-            {
-                List<string> laux = this.listasintomas.Select(o=> o.Id.ToString()).ToList();
-                if (laux.Contains(item.Name))
-                {
-                    Controls.Remove(item);
-                    item.Dispose();
-                }
-                List<string> laux2 = this.listasintomas.Select(o => o.Sintoma.ToString()).ToList();
-                if (laux2.Contains(item.Name))
-                {
-                    Controls.Remove(item);
-                    item.Dispose();
-                }
-                List<string> laux3 = this.listasintomas.Select(o => o.Coef.ToString()).ToList();
-                if (laux3.Contains(item.Name))
-                {
-                    Controls.Remove(item);
-                    item.Dispose();
-                }
-
-            }
-        }*/
+    
 
         private void ListarSintomas()
         {

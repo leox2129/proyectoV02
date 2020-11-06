@@ -29,3 +29,4 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstanda
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.AssemblyInfo.cs
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.pdb
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.csprojAssemblyReference.cache

@@ -50,15 +50,46 @@ namespace _3_Persistencia
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();                
                 string sql = "insert into productos (codigo, descripcion,precio,fecha) values " +
-                        "(@codigo, @descripcion, @precio, @fecha)";                
-                trans = conexion.BeginTransaction();
+                        "(@codigo, @descripcion, @precio, @fecha)";                                
                 MySqlCommand comando = new MySqlCommand(sql, conexion);                
                 sql = "delete from sintomapatologia where idpatologia=@idpat";
                 comando = new MySqlCommand(sql, conexion);
                 comando.Parameters.AddWithValue("@idpat", idPatologia);
                 comando.ExecuteNonQuery();
+                //cierro la conexion
+                conexion.Close();
+                conexion.Dispose();
+                //la abro con la transaccion
+
+
+
+
+                /*
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                string sql = "insert into productos (codigo, descripcion,precio,fecha) values " +
+                        "(@codigo, @descripcion, @precio, @fecha)";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                trans = conexion.BeginTransaction();*/
+
+
+
+
+
+
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();                
                 sql = @"insert into sintomapatologia
                            (idsintomas, idpatologia, coeficiente) VALUES(@idsintoma, @idpatologia, @coef)";
+                comando = new MySqlCommand(sql, conexion);
+                trans = conexion.BeginTransaction();
+                /*long longVar = 15;
+                int entero = 15;
+                if (longVar< int.MaxValue)
+                {
+                    entero = (int) longVar; 
+                }*/
+                //int.MaxValue;
                 foreach (DTSintoma item in list)
                 {
                     comando.Parameters.Clear();

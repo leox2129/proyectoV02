@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "glORxz8tlcz6/XEIcPdU06wPQedRUx5OUo1XHe8jMNhMOgRJHchyIfFHMoV3wbh7PFPrvnomL4pzUbvnke535w==",
+  "dgSpecHash": "jGKxiVs2fAsAtcoBtvZFqAnrodZ9JQxcZhZ2rsNKh1hqM6dnfw3UpQVdaMojFNsHxmcrAuqnI7A3hjqEWrLlmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\equipo\\Desktop\\Clase02-master\\Clase01\\_4_TipoDeDato\\_4_TipoDeDato.csproj",
+  "projectFilePath": "C:\\Users\\leandro\\Documents\\Programacion3\\leoxVFInal\\proyectoV02\\_4_TipoDeDato\\_4_TipoDeDato.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\equipo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\equipo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\leandro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\leandro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtRol = new System.Windows.Forms.TextBox();
@@ -40,9 +39,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dTUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dTUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,13 +121,12 @@
             // 
             // dgvUsuario
             // 
-            this.dgvUsuario.AutoGenerateColumns = false;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.DataSource = this.dTUsuarioBindingSource;
             this.dgvUsuario.Location = new System.Drawing.Point(103, 212);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.Size = new System.Drawing.Size(581, 214);
             this.dgvUsuario.TabIndex = 10;
+    
             // 
             // btnAgregar
             // 
@@ -140,10 +136,6 @@
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // dTUsuarioBindingSource
-            // 
-            this.dTUsuarioBindingSource.DataSource = typeof(_4_TipoDeDato.DTUsuario);
             // 
             // AgregarUsuario
             // 
@@ -164,7 +156,6 @@
             this.Name = "AgregarUsuario";
             this.Text = "AgregarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dTUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +174,5 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DataGridView dgvUsuario;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.BindingSource dTUsuarioBindingSource;
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
+
 namespace Presentacion.Formularios
 {
     public partial class AgregarUsuario : Form
@@ -15,18 +15,8 @@ namespace Presentacion.Formularios
         public AgregarUsuario()
         {
             InitializeComponent();
-            InitDataGrid();
 
         }
 
-        private void InitDataGrid()
-        {/*
-            UsuarioModelo modelo = new UsuarioModelo();
-            dgvUsuario.DataSource = modelo.ListarUsuario();
-        }*/
-
-
-        }
     }
 }
-

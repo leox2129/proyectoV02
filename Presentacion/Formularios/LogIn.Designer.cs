@@ -28,29 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtMombreUsu = new System.Windows.Forms.TextBox();
             this.txtPassUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCancelar
+            // btnRegistrar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(228, 109);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnRegistrar.Location = new System.Drawing.Point(136, 123);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 0;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(141, 109);
+            this.btnIngresar.Location = new System.Drawing.Point(49, 123);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 1;
@@ -60,24 +58,22 @@
             // 
             // txtMombreUsu
             // 
-            this.txtMombreUsu.Location = new System.Drawing.Point(203, 43);
+            this.txtMombreUsu.Location = new System.Drawing.Point(111, 57);
             this.txtMombreUsu.Name = "txtMombreUsu";
             this.txtMombreUsu.Size = new System.Drawing.Size(100, 20);
             this.txtMombreUsu.TabIndex = 2;
-            this.txtMombreUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMombreUsu_TextChanged);
             // 
             // txtPassUsuario
             // 
-            this.txtPassUsuario.Location = new System.Drawing.Point(203, 69);
+            this.txtPassUsuario.Location = new System.Drawing.Point(111, 83);
             this.txtPassUsuario.Name = "txtPassUsuario";
             this.txtPassUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtPassUsuario.TabIndex = 3;
-            this.txtPassUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMombreUsu_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 43);
+            this.label1.Location = new System.Drawing.Point(46, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 4;
@@ -86,39 +82,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 72);
+            this.label2.Location = new System.Drawing.Point(60, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pass:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.logoempresaSMYLE;
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logoempresaSMYLE;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Presentacion.Properties.Resources.logoempresaSMYLE;
-            this.ClientSize = new System.Drawing.Size(342, 163);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(269, 196);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassUsuario);
             this.Controls.Add(this.txtMombreUsu);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnRegistrar);
             this.Name = "LogIn";
             this.Text = "LogIn";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,12 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtMombreUsu;
         private System.Windows.Forms.TextBox txtPassUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

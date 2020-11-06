@@ -154,13 +154,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Negocio.Objetos.DataProducto.datasource" />
     <None Include="Properties\DataSources\Negocio.Objetos.DataUsuario.datasource" />
     <None Include="Properties\DataSources\_4_TipoDeDato.DTPatologia.datasource" />
     <None Include="Properties\DataSources\_4_TipoDeDato.DTSintoma.datasource" />
-    <None Include="Properties\DataSources\_4_TipoDeDato.DTUsuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,9 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logoempresaSMYLE.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

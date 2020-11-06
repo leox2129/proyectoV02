@@ -49,7 +49,7 @@ namespace Presentacion.Formularios
             DTSintoma ds3 = new DTSintoma(3, "malestar", 20.0);*/
             SintomaModelo sintomaModelo = new SintomaModelo();
             //tiene todos los sintomas
-          this.listasintomas = sintomaModelo.ListarSintomas();
+            this.listasintomas = sintomaModelo.ListarSintomas();
 
             //esta carga los sintomasPatologia de la base de datos
             this.list = new List<DTSintoma>();

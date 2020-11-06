@@ -55,7 +55,7 @@ namespace Presentacion.Formularios
         private void btnChat_Click(object sender, EventArgs e)
         {
 
-            HacerConsulta ap = new HacerConsulta();
+            Chat ap = new Chat();
             ap.Show();
 
         }
@@ -68,7 +68,7 @@ namespace Presentacion.Formularios
 
         private void btnMaximisar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
             btnMaximisar.Visible = false;
             btnRestau.Visible = true;
 
@@ -106,7 +106,7 @@ namespace Presentacion.Formularios
 
         }
 
-        
+
     }
 }
 

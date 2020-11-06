@@ -27,8 +27,8 @@ namespace Presentacion.Formularios
 
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {            
-            string errores ="";
+        {
+            string errores = "";
             bool error = false;
             string usuarioNombre = txtMombreUsu.Text.Trim();
             string usuarioPasword = txtPassUsuario.Text.Trim();
@@ -38,7 +38,8 @@ namespace Presentacion.Formularios
                 error = true;
                 errores = "el nombre usuario esta vacio\n";
             }
-            if (string.IsNullOrEmpty(usuarioPasword)){
+            if (string.IsNullOrEmpty(usuarioPasword))
+            {
                 error = true;
                 //errores = errores + "el nombre usuario esta vacio\n";
                 errores += "el nombre password esta vacio\n";
@@ -52,16 +53,16 @@ namespace Presentacion.Formularios
             {
                 UsuarioModelo usuario = new UsuarioModelo();
                 int idUsuario = usuario.ObtenerUsuario(usuarioNombre, usuarioPasword, Variables.Globales.nombrePrograma);
-                if (idUsuario >= 1) 
+                if (idUsuario >= 1)
                 {
                     Variables.Globales.idUsuario = idUsuario;
                     Menu ap = new Menu();
                     ap.Show();
-                } 
-                else 
+                }
+                else
                 {
                     MessageBox.Show(errores);
-                }               
+                }
             }
 
 
@@ -102,8 +103,23 @@ namespace Presentacion.Formularios
             }*/
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtMombreUsu_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                {
+                    txtPassUsuario.Focus();
+                }
+
+            }
+
+
+
             /*
             if (!string.IsNullOrEmpty(txtMombreUsu.Text))
             {
@@ -120,7 +136,7 @@ namespace Presentacion.Formularios
                     {
                         MessageBox.Show("Error al intentar registrar el usuario");
                     }
-                    
+
                 }
                 else
                 {
@@ -134,9 +150,13 @@ namespace Presentacion.Formularios
             }*/
         }
 
-        private void LogIn_Load(object sender, EventArgs e)
-        {
 
-        }
+
+        
     }
 }
+
+
+
+
+

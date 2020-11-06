@@ -23,9 +23,7 @@ namespace Negocio
             }                        
         }
 
-        public SintomaModelo()
-        {
-        }
+
 
         public List<DTSintoma> ListarSintomas()
         {

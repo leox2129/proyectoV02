@@ -196,11 +196,13 @@ namespace Usuarios.Formularios
         {
             DiagnosticoModelo diagnosticoModelo = new DiagnosticoModelo();
             //retornar el dignostico
-            DTDiagnosticoMostrar diagnostico = diagnosticoModelo.CalcularPatologia(this.list, Variables.Globales.idUsuario);            
+            DTDiagnosticoMostrar diagnostico = diagnosticoModelo.CalcularPatologia(this.list, Variables.Globales.idUsuario);
+            MessageBox.Show("su diagnotico es" + diagnostico.NombrePatologia);
             DialogResult resultado = MessageBox.Show("quiere chatear\r\n agregar", "salir", MessageBoxButtons.YesNoCancel);
             if (resultado == DialogResult.Yes)
             {
-
+                //actualizar quiere chat
+                Chat formChar = new Chat(Variables.Globales.idUsuario, diagnostico.IdDiagonostico);
                 //diagnostico.IdDiagonostico;
                 //Variables.Globales.idUsuario
                 //diagnosticoModelo;

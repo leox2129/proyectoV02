@@ -74,6 +74,7 @@ namespace Negocio
             diagnostico.IdPatologia = idPatologiaInt;
             diagnostico.IdUsuario = idUsuario;
             diagnostico.Gravedad = gravedaDiagonostivo;
+            diagnostico.NombrePatologia = nombrePatologia;
             idDiagnostico = diagnosticoPersistencia.AgregarDiagnostico(diagnostico.IdPatologia, diagnostico.IdUsuario, diagnostico.Gravedad);
             diagnostico.IdDiagonostico = idDiagnostico;                        
             return diagnostico;

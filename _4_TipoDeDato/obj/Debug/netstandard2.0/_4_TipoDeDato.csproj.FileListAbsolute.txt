@@ -24,9 +24,9 @@ C:\Users\leandro\Documents\Programacion3\leoxVFInal\proyectoV02\_4_TipoDeDato\ob
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.deps.json
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\bin\Debug\netstandard2.0\_4_TipoDeDato.pdb
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.csprojAssemblyReference.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.csproj.CoreCompileInputs.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.AssemblyInfoInputs.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.AssemblyInfo.cs
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.pdb
-C:\Users\equipo\Desktop\Clase02-master\Clase01\_4_TipoDeDato\obj\Debug\netstandard2.0\_4_TipoDeDato.csprojAssemblyReference.cache

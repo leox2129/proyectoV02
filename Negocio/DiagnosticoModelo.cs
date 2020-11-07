@@ -51,20 +51,31 @@ namespace Negocio
                 }
                 if (coefCal >= coefActual)
                 {
-                    coefCal = coefActual;
+                    coefActual = coefCal;
+                    //coefCal = coefActual;
                     idPatologia = patologia.Id;
                     nombrePatologia = patologia.Nombre;
                     gravedaDiagonostivo = patologia.Gravedad;
                     //patologia.Nombre 
                 }
-                //hacer el insert a la base de datos
-                int idDiagnostico = -1;                
-                PersistenciaDiagnostico diagnosticoPersistencia = new PersistenciaDiagnostico();
-                idDiagnostico = diagnosticoPersistencia.AgregarDiagnostico(diagnostico.IdDiagonostico, idUsuario, gravedaDiagonostivo);
-                diagnostico.IdDiagonostico = idDiagnostico;
-                diagnostico.Gravedad = gravedaDiagonostivo;
+                //hacer el insert a la base de datos                
                 //diagnostico.Nombrepatologia = "dd";
             }
+            int idDiagnostico = -1;
+            
+            PersistenciaDiagnostico diagnosticoPersistencia = new PersistenciaDiagnostico();
+            int idPatologiaInt = 0;
+            if (idPatologia <= int.MaxValue)
+            {
+                idPatologiaInt = (int)idPatologia;
+            }
+
+
+            diagnostico.IdPatologia = idPatologiaInt;
+            diagnostico.IdUsuario = idUsuario;
+            diagnostico.Gravedad = gravedaDiagonostivo;
+            idDiagnostico = diagnosticoPersistencia.AgregarDiagnostico(diagnostico.IdPatologia, diagnostico.IdUsuario, diagnostico.Gravedad);
+            diagnostico.IdDiagonostico = idDiagnostico;                        
             return diagnostico;
         }//end calcular Patologia
     }

@@ -53,20 +53,26 @@ namespace _3_Persistencia
 
 
 
-        public List<DTDiagnostico> ListarDiagnostico()
+        public List<DTDiagnosticoMostrarMedico> ListarDiagnostico()
         {
-            List<DTDiagnostico> list = new List<DTDiagnostico>();
+            
+            List<DTDiagnosticoMostrarMedico> list = new List<DTDiagnosticoMostrarMedico>();
             MySqlConnection conexion = null;
             MySqlDataReader reader = null;
             try
             {
-
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
                 string sql;
-                sql = @"select idpatologia,gravedad,nombre
-                        from patologia
-                        order by idpatologia asc";
+                sql = @"select diag.iddiagnosticos, diag.estado, diag.gravedad,
+                        pat.nombre, usu.nombre
+                        from diagnosticos as diag
+                        inner join patologia as pat
+                        on pat.idPatologia = diag.idPatologia
+                        inner join usuarios as usu
+                        on diag.idPaciente = usu.idUsuarios
+                        where diag.quierechat=1
+                        order by pat.gravedad desc";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
@@ -74,7 +80,6 @@ namespace _3_Persistencia
                     while (reader.Read())
                     {
 
-                        //string s = reader.GetNameGet["id"];
                         string iddiagnostico = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0"; ;
                         string idpatologia = (reader[1] != DBNull.Value) ? reader.GetString(1) : "0"; ;
                         string idpaciente = (reader[2] != DBNull.Value) ? reader.GetString(2) : "0";
@@ -83,7 +88,6 @@ namespace _3_Persistencia
                         string chat = (reader[5] != DBNull.Value) ? reader.GetString(5) : "";
                         string nombrepaciente = (reader[6] != DBNull.Value) ? reader.GetString(6) : "";
                         string nombredoctor = (reader[7] != DBNull.Value) ? reader.GetString(7) : "";
-
                         int iddiagnosticoInt  = int.Parse(iddiagnostico);
                         int idpatologiaInt = int.Parse(idpatologia);
                         int idpacienteInt = int.Parse(idpaciente);
@@ -92,13 +96,6 @@ namespace _3_Persistencia
                         string chatVarchar = chat;
                         string nombrepacienteVarchar = nombrepaciente;
                         string nombredoctorVarchar = nombredoctor;
-
-
-
-
-
-                        // DTDiagnosticoMostrar diagnosticoMostrar = new DTDiagnostico(idLong, gravedadInt, nombre);
-                        //list.Add(iddiagnostico);
                     }
                 }
 
@@ -120,6 +117,91 @@ namespace _3_Persistencia
                 }
             }
             return list;
+        }//end listar Diagnostico
+
+        public List<DTDiagnosticoMostrarMedico> ListarDiagnosticoMedico()
+        {
+            {
+                List<DTDiagnosticoMostrarMedico> list = new List<DTDiagnosticoMostrarMedico>();
+                MySqlConnection conexion = null;
+                MySqlDataReader reader = null;
+                try
+                {
+
+                    conexion = ConexionDB.GetConexion();
+                    conexion.Open();
+                    string sql;
+                    sql = @"select diag.iddiagnosticos, diag.estado, diag.gravedad,
+                            pat.nombre, usu.nombre
+                            from diagnosticos as diag
+                            inner join patologia as pat
+                            on pat.idPatologia = diag.idPatologia
+                            inner join usuarios as usu
+                            on diag.idPaciente = usu.idUsuarios
+                            where diag.quierechat=1
+                            order by pat.gravedad desc";
+                    MySqlCommand comando = new MySqlCommand(sql, conexion);
+                    reader = comando.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+
+                            //string s = reader.GetNameGet["id"];
+                            string iddiagnostico = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0"; ;
+                            string idpatologia = (reader[1] != DBNull.Value) ? reader.GetString(1) : "0"; ;
+                            string idpaciente = (reader[2] != DBNull.Value) ? reader.GetString(2) : "0";
+                            string iddoctor = (reader[3] != DBNull.Value) ? reader.GetString(3) : "0";
+                            string nombrepatologia = (reader[4] != DBNull.Value) ? reader.GetString(4) : "";
+                            string chat = (reader[5] != DBNull.Value) ? reader.GetString(5) : "";
+                            string nombrepaciente = (reader[6] != DBNull.Value) ? reader.GetString(6) : "";
+                            string nombredoctor = (reader[7] != DBNull.Value) ? reader.GetString(7) : "";
+
+                            int iddiagnosticoInt = int.Parse(iddiagnostico);
+                            int idpatologiaInt = int.Parse(idpatologia);
+                            int idpacienteInt = int.Parse(idpaciente);
+                            int iddoctorInt = int.Parse(iddoctor);
+                            string nombrepatologiaVarchar = nombrepatologia;
+                            string chatVarchar = chat;
+                            string nombrepacienteVarchar = nombrepaciente;
+                            string nombredoctorVarchar = nombredoctor;
+
+
+
+
+
+                            // DTDiagnosticoMostrar diagnosticoMostrar = new DTDiagnostico(idLong, gravedadInt, nombre);
+                            //list.Add(iddiagnostico);
+                        }
+                    }
+
+                }
+                catch (MySqlException ex)
+                {
+                    string mensaje = ex.ToString();
+                    Console.WriteLine("hola" + mensaje);
+                }
+                finally
+                {
+                    if (conexion != null)
+                    {
+                        conexion.Close();
+                    }
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
+                }
+                return list;
+
+            }
+
         }
-    }
-}
+
+
+
+
+
+
+    }//end class
+}//end namespace

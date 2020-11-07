@@ -79,5 +79,13 @@ namespace Negocio
             diagnostico.IdDiagonostico = idDiagnostico;                        
             return diagnostico;
         }//end calcular Patologia
+
+        public List<DTDiagnosticoMostrarMedico> ListarDiagnosticosMedico()
+        {
+            List<DTDiagnosticoMostrarMedico> list = new List<DTDiagnosticoMostrarMedico>();
+            PersistenciaDiagnostico persistencia = new PersistenciaDiagnostico();
+            list = persistencia.ListarDiagnosticoMedico();
+            return list;
+        }
     }
 }

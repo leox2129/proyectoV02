@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.dataUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.btnListarDignostico = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnRestau = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -50,21 +50,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregarProducto
+            // btnListarDignostico
             // 
-            this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(2, 188);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(218, 28);
-            this.btnAgregarProducto.TabIndex = 1;
-            this.btnAgregarProducto.Text = "Agregar Sintoma";
-            this.btnAgregarProducto.UseVisualStyleBackColor = true;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            this.btnListarDignostico.FlatAppearance.BorderSize = 0;
+            this.btnListarDignostico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnListarDignostico.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnListarDignostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarDignostico.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnListarDignostico.Location = new System.Drawing.Point(2, 188);
+            this.btnListarDignostico.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListarDignostico.Name = "btnListarDignostico";
+            this.btnListarDignostico.Size = new System.Drawing.Size(218, 28);
+            this.btnListarDignostico.TabIndex = 1;
+            this.btnListarDignostico.Text = "Listar Diagnosticos";
+            this.btnListarDignostico.UseVisualStyleBackColor = true;
+            this.btnListarDignostico.Click += new System.EventHandler(this.btnListarDignostico_Click);
             // 
             // BarraTitulo
             // 
@@ -140,7 +140,7 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MenuVertical.Controls.Add(this.pictureBox1);
-            this.MenuVertical.Controls.Add(this.btnAgregarProducto);
+            this.MenuVertical.Controls.Add(this.btnListarDignostico);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 35);
             this.MenuVertical.Name = "MenuVertical";
@@ -195,7 +195,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAgregarProducto;
+        private System.Windows.Forms.Button btnListarDignostico;
         private System.Windows.Forms.BindingSource dataUsuarioBindingSource;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox btnCerrar;

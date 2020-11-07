@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _4_TipoDeDato;
+
+
+
 
 ///llamada a presentacion 
 
@@ -19,26 +23,17 @@ namespace Medicos.Formularios
         public Menu()
         {
             InitializeComponent();
+            InitDgvDiadnostico();
         }
 
-        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        private void InitDgvDiadnostico()
         {
-
-            /*AgregarSintoma ap = new AgregarSintoma();
-            ap.Show();
-
-            //UsuarioView usuarioView= new UsuarioView();
-            //List<DataUsuario> lista = usuarioView.listaUsuarios();
-            //dgv.DataSource = lista;
-            /*foreach(DataUsuario usr in lista)
-            {
-                int n = dgv.Rows.Add(); //retorna el indice 
-                dgv.Rows[n].Cells[0].Value = (string) usr.Nombre;
-                dgv.Rows[n].Cells[1].Value = (string) usr.Apellido;                
-
-            }*/
-
+            /*
+            DiagnosticoModelo diagnostico = new DiagnosticoModelo();
+            List<DTDiagnosticoMostrar> listaDiagnostico = new List<DTDiagnosticoMostrar>();*/
         }
+
+
 
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -120,6 +115,12 @@ namespace Medicos.Formularios
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnListarDignostico_Click(object sender, EventArgs e)
+        {
+            //listar diagnosticos
+            
         }
     }
 }

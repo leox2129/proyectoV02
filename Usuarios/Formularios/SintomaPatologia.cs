@@ -127,6 +127,7 @@ namespace Usuarios.Formularios
 
         private void btn_Click(object sender1, EventArgs e1, long id)
         {
+
             bool encontrado = false;
             int cantidad = this.list.Count;
             int iter = 0;

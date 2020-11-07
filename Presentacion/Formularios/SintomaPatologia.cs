@@ -184,7 +184,8 @@ namespace Presentacion.Formularios
                     {
                         //this.list[iter].Coef = double.Parse(coef);
                         TextBox txtb = (TextBox)sender;
-                        txtb.Text = "0";
+                        txtb.Text = "";
+                        this.list[iter].Coef = 0;
 
                     }
                     

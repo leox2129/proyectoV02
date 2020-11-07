@@ -200,6 +200,7 @@ namespace Usuarios.Formularios
             DialogResult resultado = MessageBox.Show("quiere chatear\r\n agregar", "salir", MessageBoxButtons.YesNoCancel);
             if (resultado == DialogResult.Yes)
             {
+
                 //diagnostico.IdDiagonostico;
                 //Variables.Globales.idUsuario
                 //diagnosticoModelo;

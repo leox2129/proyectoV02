@@ -54,6 +54,8 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\bin\Debug\_3_Persistencia
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\bin\Debug\MySql.Data.xml
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csprojAssemblyReference.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.exe.config
+C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.LogIn.resources
+C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.Menu.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Properties.Resources.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csproj.GenerateResource.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csproj.CoreCompileInputs.cache

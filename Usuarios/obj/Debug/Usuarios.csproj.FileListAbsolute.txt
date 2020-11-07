@@ -56,6 +56,7 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\bin\Debug\_3_Persistenci
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\bin\Debug\MySql.Data.xml
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.csprojAssemblyReference.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.exe.config
+C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.Formularios.Chat.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.Formularios.LogIn.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.Formularios.Menu.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.Formularios.SintomaPatologia.resources
@@ -65,4 +66,3 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.cspro
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.csproj.CopyComplete
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.exe
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.pdb
-C:\Users\equipo\Desktop\Clase02-master\Clase01\Usuarios\obj\Debug\Usuarios.Formularios.Chat.resources

@@ -117,6 +117,12 @@ namespace Presentacion.Formularios
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
         }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario usuarios= new AgregarUsuario();
+            usuarios.Show();
+        }
     }
 }
 

@@ -37,6 +37,8 @@
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnSintopato = new System.Windows.Forms.Button();
             this.btnPatologia = new System.Windows.Forms.Button();
+            this.btnAgregarUsuario = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -50,6 +52,7 @@
             this.dataUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BarraTitulo.SuspendLayout();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,7 +91,7 @@
             this.btConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.btConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConsulta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btConsulta.Location = new System.Drawing.Point(33, 194);
+            this.btConsulta.Location = new System.Drawing.Point(33, 193);
             this.btConsulta.Name = "btConsulta";
             this.btConsulta.Size = new System.Drawing.Size(187, 28);
             this.btConsulta.TabIndex = 2;
@@ -103,7 +106,7 @@
             this.btnChat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChat.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnChat.Location = new System.Drawing.Point(33, 227);
+            this.btnChat.Location = new System.Drawing.Point(33, 225);
             this.btnChat.Name = "btnChat";
             this.btnChat.Size = new System.Drawing.Size(187, 27);
             this.btnChat.TabIndex = 3;
@@ -128,6 +131,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MenuVertical.Controls.Add(this.pictureBox7);
+            this.MenuVertical.Controls.Add(this.btnAgregarUsuario);
             this.MenuVertical.Controls.Add(this.pictureBox6);
             this.MenuVertical.Controls.Add(this.btnSintopato);
             this.MenuVertical.Controls.Add(this.pictureBox5);
@@ -152,7 +157,7 @@
             this.btnSintopato.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.btnSintopato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSintopato.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnSintopato.Location = new System.Drawing.Point(36, 295);
+            this.btnSintopato.Location = new System.Drawing.Point(36, 288);
             this.btnSintopato.Name = "btnSintopato";
             this.btnSintopato.Size = new System.Drawing.Size(184, 27);
             this.btnSintopato.TabIndex = 6;
@@ -167,21 +172,47 @@
             this.btnPatologia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.btnPatologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPatologia.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnPatologia.Location = new System.Drawing.Point(33, 261);
+            this.btnPatologia.Location = new System.Drawing.Point(33, 256);
             this.btnPatologia.Name = "btnPatologia";
-            this.btnPatologia.Size = new System.Drawing.Size(187, 28);
+            this.btnPatologia.Size = new System.Drawing.Size(190, 27);
             this.btnPatologia.TabIndex = 5;
             this.btnPatologia.Text = "Agregar patologia";
             this.btnPatologia.UseVisualStyleBackColor = false;
             this.btnPatologia.Click += new System.EventHandler(this.btnPatologia_Click);
             // 
+            // btnAgregarUsuario
+            // 
+            this.btnAgregarUsuario.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnAgregarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(33, 321);
+            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(184, 27);
+            this.btnAgregarUsuario.TabIndex = 12;
+            this.btnAgregarUsuario.Text = "Agregar Usuarios";
+            this.btnAgregarUsuario.UseVisualStyleBackColor = false;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox7.Image = global::Presentacion.Properties.Resources._12;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 321);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 27);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 12;
+            this.pictureBox7.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox6.Image = global::Presentacion.Properties.Resources.file;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 295);
+            this.pictureBox6.Location = new System.Drawing.Point(0, 288);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox6.Size = new System.Drawing.Size(39, 27);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -190,9 +221,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox5.Image = global::Presentacion.Properties.Resources.petri_dish;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 260);
+            this.pictureBox5.Location = new System.Drawing.Point(0, 257);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 28);
+            this.pictureBox5.Size = new System.Drawing.Size(39, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
@@ -201,9 +232,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox4.Image = global::Presentacion.Properties.Resources.doctor;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 227);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 225);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 28);
+            this.pictureBox4.Size = new System.Drawing.Size(39, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -223,7 +254,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.website;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 194);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 193);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(39, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,6 +344,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -347,5 +379,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnAgregarUsuario;
     }
 }

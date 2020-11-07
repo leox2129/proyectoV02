@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvSintomas = new System.Windows.Forms.DataGridView();
-            this.dTSintomaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sintomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTSintomaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregarSintoma = new System.Windows.Forms.Button();
@@ -56,10 +56,7 @@
             this.dgvSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSintomas.Size = new System.Drawing.Size(765, 245);
             this.dgvSintomas.TabIndex = 0;
-            // 
-            // dTSintomaBindingSource
-            // 
-            this.dTSintomaBindingSource.DataSource = typeof(_4_TipoDeDato.DTSintoma);
+            this.dgvSintomas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSintomas_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -75,6 +72,10 @@
             this.sintomaDataGridViewTextBoxColumn.HeaderText = "Sintoma";
             this.sintomaDataGridViewTextBoxColumn.Name = "sintomaDataGridViewTextBoxColumn";
             this.sintomaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dTSintomaBindingSource
+            // 
+            this.dTSintomaBindingSource.DataSource = typeof(_4_TipoDeDato.DTSintoma);
             // 
             // lblNombre
             // 
@@ -103,7 +104,7 @@
             this.btnAgregarSintoma.UseVisualStyleBackColor = true;
             this.btnAgregarSintoma.Click += new System.EventHandler(this.btnAgregarSintoma_Click);
             // 
-            // AgregarSintoma
+            // AgregarSintomaPatologia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +113,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvSintomas);
-            this.Name = "AgregarSintoma";
+            this.Name = "AgregarSintomaPatologia";
             this.Text = "AgregarSintoma";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSintomas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTSintomaBindingSource)).EndInit();

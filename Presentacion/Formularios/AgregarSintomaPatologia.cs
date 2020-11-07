@@ -60,6 +60,11 @@ namespace Presentacion.Formularios
         {
 
         }
+
+        private void dgvSintomas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

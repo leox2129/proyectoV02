@@ -9,21 +9,31 @@ namespace _3_Persistencia
     public class PersistenciaDiagnostico
     {
 
-        public long AgregarDiagnostico(int iddiagnostico, int patologia)
+        public int AgregarDiagnostico(int idpatologia, int idUsuario,int gravedad,int estado)
         {
+            // 'pendiente'
+            string estadoDiagnostico = "pendiente"; 
             MySqlConnection conexion = null;
-             iddiagnostico = 0;
+            int iddiagnostico = -1;
             try
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql = "insert into patologia (nombre,gravedad) values (@nombre,@gravedad)";
+                string sql = @"insert into diagnosticos 
+                            (idPaciente, estado, gravedad, idPatologia) values 
+                            (@idPaciente, @estado, @gravedad,@idPatologia)";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
-               // comando.Parameters.AddWithValue("@nombre", nombre);
-                //comando.Parameters.AddWithValue("@gravedad", gravedad);
+                comando.Parameters.AddWithValue("@idPaciente", idUsuario);
+                comando.Parameters.AddWithValue("@estado", estadoDiagnostico);
+                comando.Parameters.AddWithValue("@gravedad",gravedad );
+                comando.Parameters.AddWithValue("@idPatologia", idpatologia);
                 comando.ExecuteNonQuery();
                 //obtiene el ultimo id ingresado
-               // iddiagnostico = comando.LastInsertediddiagnost;
+                long idDiagnosticoLong = comando.LastInsertedId;
+                if (iddiagnostico <= int.MaxValue) { }
+                {
+                    iddiagnostico = (int)idDiagnosticoLong;                    
+                }
             }
             catch (MySqlException ex)
             {

@@ -194,8 +194,10 @@ namespace Usuarios.Formularios
 
         private void btnDiagnosticar_Click(object sender, EventArgs e)
         {
-            DiagnosticoModelo Diagnostio = new DiagnosticoModelo();
-            Diagnostio.CalcularPatologia(this.list);
+            DiagnosticoModelo diagnostio = new DiagnosticoModelo();
+            //retornar el dignostico
+            DTDiagnosticoMostrar diagonostico = diagnostio.CalcularPatologia(this.list);
+
             
         }
 

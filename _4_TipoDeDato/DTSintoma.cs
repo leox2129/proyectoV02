@@ -11,6 +11,10 @@ namespace _4_TipoDeDato
         private double coef;
         private double peligro;
 
+        public DTSintoma()
+        {
+        }
+
         public DTSintoma(long id, string sintoma)
         {
             this.id = id;

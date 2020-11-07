@@ -26,6 +26,11 @@ namespace Negocio
             return idusuario;
         }
 
+        public object ListarUsuarios()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// retorna el id del usuario
         /// </summary>

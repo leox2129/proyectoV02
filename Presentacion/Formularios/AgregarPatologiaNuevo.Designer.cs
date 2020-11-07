@@ -102,13 +102,13 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(134, 22);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(119, 20);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnAgregarPatologia
             // 
-            this.btnAgregarPatologia.Location = new System.Drawing.Point(319, 22);
+            this.btnAgregarPatologia.Location = new System.Drawing.Point(299, 17);
             this.btnAgregarPatologia.Name = "btnAgregarPatologia";
             this.btnAgregarPatologia.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarPatologia.TabIndex = 4;
@@ -118,9 +118,9 @@
             // 
             // txtGravedad
             // 
-            this.txtGravedad.Location = new System.Drawing.Point(125, 63);
+            this.txtGravedad.Location = new System.Drawing.Point(134, 63);
             this.txtGravedad.Name = "txtGravedad";
-            this.txtGravedad.Size = new System.Drawing.Size(128, 20);
+            this.txtGravedad.Size = new System.Drawing.Size(119, 20);
             this.txtGravedad.TabIndex = 5;
             // 
             // lblGravedad
@@ -134,7 +134,7 @@
             // 
             // btnAgregarSintoma
             // 
-            this.btnAgregarSintoma.Location = new System.Drawing.Point(443, 21);
+            this.btnAgregarSintoma.Location = new System.Drawing.Point(299, 59);
             this.btnAgregarSintoma.Name = "btnAgregarSintoma";
             this.btnAgregarSintoma.Size = new System.Drawing.Size(95, 24);
             this.btnAgregarSintoma.TabIndex = 7;
@@ -146,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAgregarSintoma);
             this.Controls.Add(this.lblGravedad);

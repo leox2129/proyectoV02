@@ -8,7 +8,7 @@ namespace Usuarios.Variables
 {
     public static class Globales
     {        
-        public static string nombrePrograma = "gestion";
+        public const string nombrePrograma = "gestion";
         public static int idUsuario = 0;
     }
 }

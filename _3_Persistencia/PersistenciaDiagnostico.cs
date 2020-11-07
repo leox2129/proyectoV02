@@ -9,7 +9,7 @@ namespace _3_Persistencia
     public class PersistenciaDiagnostico
     {
 
-        public int AgregarDiagnostico(int idpatologia, int idUsuario,int gravedad,int estado)
+        public int AgregarDiagnostico(int idpatologia, int idUsuario,int gravedad)
         {
             // 'pendiente'
             string estadoDiagnostico = "pendiente"; 
@@ -30,7 +30,7 @@ namespace _3_Persistencia
                 comando.ExecuteNonQuery();
                 //obtiene el ultimo id ingresado
                 long idDiagnosticoLong = comando.LastInsertedId;
-                if (iddiagnostico <= int.MaxValue) { }
+                if (iddiagnostico <= int.MaxValue) 
                 {
                     iddiagnostico = (int)idDiagnosticoLong;                    
                 }

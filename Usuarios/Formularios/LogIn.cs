@@ -54,13 +54,14 @@ namespace Usuarios.Formularios
                 int idUsuario = usuario.ObtenerUsuario(usuarioNombre, usuarioPasword, Variables.Globales.nombrePrograma);
                 if (idUsuario >= 1) 
                 {
+                    //asignas el id del usuario
                     Variables.Globales.idUsuario = idUsuario;
                     Menu ap = new Menu();
                     ap.Show();
                 } 
                 else 
                 {
-                    MessageBox.Show(errores);
+                    MessageBox.Show("usuario a cotraseña invalidos");
                 }               
             }
 

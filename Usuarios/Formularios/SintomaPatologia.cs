@@ -11,7 +11,7 @@ using System.Web;
 using System.Windows.Forms;
 using _4_TipoDeDato;
 using Negocio;
-
+using Usuarios;
 
 namespace Usuarios.Formularios
 {
@@ -194,11 +194,21 @@ namespace Usuarios.Formularios
 
         private void btnDiagnosticar_Click(object sender, EventArgs e)
         {
-            DiagnosticoModelo diagnostio = new DiagnosticoModelo();
+            DiagnosticoModelo diagnosticoModelo = new DiagnosticoModelo();
             //retornar el dignostico
-            DTDiagnosticoMostrar diagonostico = diagnostio.CalcularPatologia(this.list);
+            DTDiagnosticoMostrar diagnostico = diagnosticoModelo.CalcularPatologia(this.list, Variables.Globales.idUsuario);            
+            DialogResult resultado = MessageBox.Show("quiere chatear\r\n agregar", "salir", MessageBoxButtons.YesNoCancel);
+            if (resultado == DialogResult.Yes)
+            {
+                //diagnostico.IdDiagonostico;
+                //Variables.Globales.idUsuario
+                //diagnosticoModelo;
+                //abrir un chat.
+            }
 
-            
+
+
+
         }
 
         /*private void btnGuardar_Click(object sender, EventArgs e)

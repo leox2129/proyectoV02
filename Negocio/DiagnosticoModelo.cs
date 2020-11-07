@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using _4_TipoDeDato;
-
+using _3_Persistencia;
 
 
 namespace Negocio
@@ -20,16 +20,16 @@ namespace Negocio
         /// 
         /// </summary>
         /// <param name="list">la lista de sintomas que tiene el paciente</param>
-        public DTDiagnosticoMostrar CalcularPatologia(List<DTSintoma> list)
+        public DTDiagnosticoMostrar CalcularPatologia(List<DTSintoma> list, int idUsuario)
         {
-            DTDiagnosticoMostrar diagnotico = new DTDiagnosticoMostrar();
+            DTDiagnosticoMostrar diagnostico = new DTDiagnosticoMostrar();
             PatologiaModelo modelo = new PatologiaModelo();
             List<DTPatologia> listaPatologias =  modelo.ListarPatologias();
             double coefActual = 0;
             long idPatologia = -1;
-            DTDiagnostico diagnostico = new DTDiagnostico();
+            //DTDiagnostico diagnostico = new DTDiagnostico();
             string nombrePatologia = "sin diagonostico";
-
+            int gravedaDiagonostivo=-1;
             foreach (DTPatologia patologia in listaPatologias)
             {
                 SintomaModelo sintomaModelo = new SintomaModelo();
@@ -53,16 +53,19 @@ namespace Negocio
                 {
                     coefCal = coefActual;
                     idPatologia = patologia.Id;
-                    nombrePatologia = patologia.Nombre;                    
+                    nombrePatologia = patologia.Nombre;
+                    gravedaDiagonostivo = patologia.Gravedad;
                     //patologia.Nombre 
                 }
                 //hacer el insert a la base de datos
-
-                int idDiagnostico = -1;
-                diagnostico.Iddiagnostico = idDiagnostico;
-                diagnostico.Nombrepatologia = "dd";
+                int idDiagnostico = -1;                
+                PersistenciaDiagnostico diagnosticoPersistencia = new PersistenciaDiagnostico();
+                idDiagnostico = diagnosticoPersistencia.AgregarDiagnostico(diagnostico.IdDiagonostico, idUsuario, gravedaDiagonostivo);
+                diagnostico.IdDiagonostico = idDiagnostico;
+                diagnostico.Gravedad = gravedaDiagonostivo;
+                //diagnostico.Nombrepatologia = "dd";
             }
-            return diagnotico;
+            return diagnostico;
         }//end calcular Patologia
     }
 }

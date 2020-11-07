@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Negocio;
 
 namespace Medicos.Formularios
 {
@@ -26,9 +26,8 @@ namespace Medicos.Formularios
         private void InitDataGrid()
         {
 
-            /*DiagnosticoModelo modelo = new DiagnosticoModelo();
-
-            dgvDianostico.DataSource = modelo.ListarDiagnosticosMedico();           */ 
+            DiagnosticoModelo modelo = new DiagnosticoModelo();
+            dgvDianostico.DataSource = modelo.ListarDiagnosticosMedico();           
 
         }
             

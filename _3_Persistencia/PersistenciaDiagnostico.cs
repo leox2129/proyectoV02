@@ -138,7 +138,8 @@ namespace _3_Persistencia
                             on pat.idPatologia = diag.idPatologia
                             inner join usuarios as usu
                             on diag.idPaciente = usu.idUsuarios
-                            where diag.quierechat=1
+                            where diag.quierechat=1 and 
+                            diag.estado='pendiente'
                             order by pat.gravedad desc";
                     MySqlCommand comando = new MySqlCommand(sql, conexion);
                     reader = comando.ExecuteReader();
@@ -146,32 +147,15 @@ namespace _3_Persistencia
                     {
                         while (reader.Read())
                         {
-
-                            //string s = reader.GetNameGet["id"];
-                            string iddiagnostico = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0"; ;
-                            string idpatologia = (reader[1] != DBNull.Value) ? reader.GetString(1) : "0"; ;
-                            string idpaciente = (reader[2] != DBNull.Value) ? reader.GetString(2) : "0";
-                            string iddoctor = (reader[3] != DBNull.Value) ? reader.GetString(3) : "0";
-                            string nombrepatologia = (reader[4] != DBNull.Value) ? reader.GetString(4) : "";
-                            string chat = (reader[5] != DBNull.Value) ? reader.GetString(5) : "";
-                            string nombrepaciente = (reader[6] != DBNull.Value) ? reader.GetString(6) : "";
-                            string nombredoctor = (reader[7] != DBNull.Value) ? reader.GetString(7) : "";
-
-                            int iddiagnosticoInt = int.Parse(iddiagnostico);
-                            int idpatologiaInt = int.Parse(idpatologia);
-                            int idpacienteInt = int.Parse(idpaciente);
-                            int iddoctorInt = int.Parse(iddoctor);
-                            string nombrepatologiaVarchar = nombrepatologia;
-                            string chatVarchar = chat;
-                            string nombrepacienteVarchar = nombrepaciente;
-                            string nombredoctorVarchar = nombredoctor;
-
-
-
-
-
-                            // DTDiagnosticoMostrar diagnosticoMostrar = new DTDiagnostico(idLong, gravedadInt, nombre);
-                            //list.Add(iddiagnostico);
+                            string idDiagnosticoStr = (reader[0] != DBNull.Value) ? reader.GetString(0) : "0";
+                            string estado = (reader[1] != DBNull.Value) ? reader.GetString(1) : "0";
+                            string gravedadStr = (reader[2] != DBNull.Value) ? reader.GetString(2) : "0";
+                            string nombrePatologia = (reader[3] != DBNull.Value) ? reader.GetString(3) : "0";
+                            string nombrePaciente = (reader[4] != DBNull.Value) ? reader.GetString(4) : "";
+                            int idDiagnosticoInt = int.Parse(idDiagnosticoStr);
+                            int graveddadInt = int.Parse(gravedadStr);
+                            DTDiagnosticoMostrarMedico dataMedico = new DTDiagnosticoMostrarMedico(idDiagnosticoInt ,estado,graveddadInt,nombrePatologia,nombrePaciente);
+                            list.Add(dataMedico);
                         }
                     }
 

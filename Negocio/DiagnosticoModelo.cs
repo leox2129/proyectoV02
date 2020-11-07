@@ -24,8 +24,7 @@ namespace Negocio
             foreach (DTPatologia patologia in listaPatologias)
             {
                 SintomaModelo sintomaModelo = new SintomaModelo();
-                //List<DT>
-                
+                //List<DT>                
                 double coefCal = 0;
                 List<DTSintoma> sintomasPat = sintomaModelo.ListarSintomasPatologia(patologia.Id);
                 foreach (var item in list)
@@ -42,9 +41,11 @@ namespace Negocio
                 }
                 if (coefCal > coefActual)
                 {
+                    coefCal = coefActual;
                     idPatologia = patologia.Id;
+                    //patologia.Nombre 
                 }
-
+                //hacer el insert a la base de datos, 
             }
         }//end calcular Patologia
     }

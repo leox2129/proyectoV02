@@ -155,6 +155,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Negocio.Objetos.DataProducto.datasource" />
     <None Include="Properties\DataSources\Negocio.Objetos.DataUsuario.datasource" />
@@ -178,6 +179,33 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\122.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoempresaSMYLE1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symlie lienzop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\petri-dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

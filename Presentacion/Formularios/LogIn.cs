@@ -104,6 +104,9 @@ namespace Presentacion.Formularios
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+
+
             /*
             if (!string.IsNullOrEmpty(txtMombreUsu.Text))
             {

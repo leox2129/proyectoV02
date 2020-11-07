@@ -17,6 +17,11 @@ namespace _4_TipoDeDato
         private string nombrepaciente;
         private string nombredoctor;
 
+        public DTDiagnostico()
+        {
+    
+        }
+
         public int Iddiagnostico { get => iddiagnostico; set => iddiagnostico = value; }
         public int Idpatologia { get => idpatologia; set => idpatologia = value; }
         public int Quierechat { get => quierechat; set => quierechat = value; }

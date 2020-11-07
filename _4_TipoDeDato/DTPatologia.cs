@@ -7,13 +7,13 @@ namespace _4_TipoDeDato
 {
     public class DTPatologia
     {
-        private long id;
-        private int gravedad;
-        private string nombre;
+            private long id;
+            private int gravedad;
+            private string nombre;
 
         public DTPatologia(long id,int gravedad)
         {
-            this.id = id;
+            this.id = id;               
             this.Gravedad = gravedad;
         }
 

@@ -199,6 +199,7 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.PanelContenedor.TabIndex = 6;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
             // Menu
             // 

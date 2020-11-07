@@ -70,7 +70,7 @@ namespace Usuarios.Formularios
 
         private void btnMaximisar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
             btnMaximisar.Visible = false;
             btnRestau.Visible = true;
 
@@ -120,6 +120,11 @@ namespace Usuarios.Formularios
             //llamar a formuario,
             SintomaPatologia formulario = new SintomaPatologia();
             formulario.Show();
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

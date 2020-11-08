@@ -40,7 +40,7 @@ namespace Medicos.Formularios
             t = new System.Timers.Timer();
             t.AutoReset = true;
             // Start the timer
-            t.Enabled = false;//despues cambiar a tru
+            t.Enabled = true;//despues cambiar a tru
 
             t.Interval = 1000;//1s
             t.Elapsed += On_TimeEvent;
@@ -60,7 +60,7 @@ namespace Medicos.Formularios
             {
                 Mensaje chat = new Mensaje();
                 //id patologia, idUsuarioE, mensaje   
-
+                txtMensaje.Text = "";
                 Mensaje.Agregar(idDiagnostico, this.idUsuario, mensaje);
                 ActualizarListaChat();
                 //lstChat.Items.Add(text);
@@ -98,7 +98,7 @@ namespace Medicos.Formularios
                 }
                 this.cantidadMensajes = list.Count;
             }
-            t.Enabled = false;//cambiar a true
+            t.Enabled = true;//cambiar a true
             //list.Count = l
 
 

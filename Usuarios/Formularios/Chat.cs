@@ -59,7 +59,7 @@ namespace Usuarios.Formularios
             {
                 Mensaje chat = new Mensaje();
                 //id patologia, idUsuarioE, mensaje   
-
+                txtMensaje.Text = "";
                 Mensaje.Agregar(idDiagnostico, this.idUsuario, mensaje);
                 ActualizarListaChat();
                 //lstChat.Items.Add(text);

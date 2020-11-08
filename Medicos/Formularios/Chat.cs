@@ -87,7 +87,7 @@ namespace Medicos.Formularios
 
             List<DataChat> list = null;
             Mensaje chat = new Mensaje();
-            list = chat.ObtenerMensajes(idPatologia);
+            list = chat.ObtenerMensajes(this.idDiagnostico);
             if (list.Count > this.cantidadMensajes)
             {
                 int total = list.Count;
@@ -121,5 +121,6 @@ namespace Medicos.Formularios
             ActualizarListaChat();
         }
     }
+
 }
 

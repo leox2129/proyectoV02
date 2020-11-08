@@ -54,6 +54,8 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\bin\Debug\_3_Persistencia
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\bin\Debug\MySql.Data.xml
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csprojAssemblyReference.cache
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.exe.config
+C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.Chat.resources
+C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.ListarDiagnostico.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.LogIn.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.Menu.resources
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Properties.Resources.resources
@@ -62,4 +64,3 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csproj.
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.csproj.CopyComplete
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.exe
 C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.pdb
-C:\Users\equipo\Desktop\Clase02-master\Clase01\Medicos\obj\Debug\Medicos.Formularios.ListarDiagnostico.resources

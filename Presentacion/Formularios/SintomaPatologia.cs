@@ -247,5 +247,10 @@ namespace Presentacion.Formularios
             PatologiaModelo modelo = new PatologiaModelo();
             modelo.AgregarSintomaPalogia(this.list, this.idPatologia);
         }
+
+        private void SintomaPatologia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

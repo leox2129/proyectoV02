@@ -71,23 +71,11 @@
     <Compile Include="Formularios\AgregarUsuario.Designer.cs">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Chat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Chat.Designer.cs">
-      <DependentUpon>Chat.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\SintomaPatologia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\SintomaPatologia.designer.cs">
       <DependentUpon>SintomaPatologia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Sintoma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Sintoma.Designer.cs">
-      <DependentUpon>Sintoma.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Menu.cs">
       <SubType>Form</SubType>
@@ -120,14 +108,8 @@
     <EmbeddedResource Include="Formularios\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Chat.resx">
-      <DependentUpon>Chat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\SintomaPatologia.resx">
       <DependentUpon>SintomaPatologia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Sintoma.resx">
-      <DependentUpon>Sintoma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

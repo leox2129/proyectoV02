@@ -114,6 +114,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SintomaPatologia";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.SintomaPatologia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

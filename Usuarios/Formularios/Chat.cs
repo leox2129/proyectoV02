@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Negocio;
 
 namespace Usuarios.Formularios
 {
@@ -17,60 +17,75 @@ namespace Usuarios.Formularios
         System.Timers.Timer t;
         private int cantidadMensajes = 0;
         private int idUsuario;
-        private int idPatologia;
-        public Chat(int idUsuario = 1, int idPatologia = 1)
+        private int idDiagnostico;//diag
+        public Chat(int idUsuario = 1, int idDiagnostico = 1)
         {
-            this.idUsuario = idUsuario;
-            this.idPatologia = idPatologia;
+            this.idUsuario = Variables.Globales.idUsuario;
+            this.idDiagnostico = idDiagnostico;
             InitializeComponent();
             InitChat();
             ActualizarListaChat();
         }
         private void InitChat()
         {
-            t = new System.Timers.Timer();
-            /*
-            List<DTChat> list = null;
+
+            //
+            List<DataChat> list = null;
             Mensaje chat = new Mensaje();
-            list = chat.ObtenerMensajes(this.idPatologia);
-            string mensaje = "vacio";
+            list = chat.ObtenerMensajes(this.idDiagnostico);
+
             //llenar listbox.
-            lstChat.Items.Add("inicio");
+            //lstChat.Items.Add("inicio");
             t = new System.Timers.Timer();
             t.AutoReset = true;
             // Start the timer
             t.Enabled = true;
 
             t.Interval = 1000;//1s
-            t.Elapsed += On_TimeEvent;*/
-        }
-        public Chat()
-        {
-            InitializeComponent();
+            t.Elapsed += On_TimeEvent;
+
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            //paro timer 
+            //llamo al metodo
+            //incio el timer
+            //t.Stop
+            //t.Enabled = true;
             t.Enabled = false;
             string mensaje = txtMensaje.Text;
             if (!string.IsNullOrEmpty(mensaje))
             {
-                
-                //Mensaje chat = new Mensaje();
+                Mensaje chat = new Mensaje();
                 //id patologia, idUsuarioE, mensaje   
 
-                //Mensaje.Agregar(idPatologia, idUsuario, mensaje);
-                ///ActualizarListaChat();
+                Mensaje.Agregar(idDiagnostico, this.idUsuario, mensaje);
+                ActualizarListaChat();
                 //lstChat.Items.Add(text);
                 //lstChat.SelectedIndex = lstChat.Items.Count - 1;
             }
         }
+
+
+        private void listChat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        /*private void Chat_Load(object sender, EventArgs e)
+        {
+            t = new System.Timers.Timer();
+            t.Interval = 1000;//1s
+            t.Elapsed += On_TimeEvent;
+        }*/
         private void ActualizarListaChat()
         {
 
-            List<DTChat> list = null;
-            /*Mensaje chat = new Mensaje();
-            list = chat.ObtenerMensajes(idPatologia);
+            List<DataChat> list = null;
+            Mensaje chat = new Mensaje();
+            list = chat.ObtenerMensajes(this.idDiagnostico);
             if (list.Count > this.cantidadMensajes)
             {
                 int total = list.Count;
@@ -81,19 +96,27 @@ namespace Usuarios.Formularios
                     lstChat.SelectedIndex = lstChat.Items.Count - 1;
                 }
                 this.cantidadMensajes = list.Count;
-            }*/
+            }
             t.Enabled = true;
+            //list.Count = l
 
+
+            /*foreach (DataChat item in list)
+            {
+                string text = item.Nombre + ": " + item.Mensaje;
+                lstChat.Items.Add(text);
+                lstChat.SelectedIndex = lstChat.Items.Count - 1;
+            }*/
         }
+
+
+
+
+
         private void On_TimeEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
-            string hola = "hola";
+
             ActualizarListaChat();
-        }
-
-        private void Chat_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

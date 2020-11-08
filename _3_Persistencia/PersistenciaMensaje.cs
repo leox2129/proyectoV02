@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using _4_TipoDeDato;
-using MySql.Data.MySqlClient;
+
 
 namespace _3_Persistencia
 {
@@ -60,7 +62,7 @@ namespace _3_Persistencia
                 }
             }
             return list;
-        }
+        }//end getmensajes
 
         public void Agregar(int idDiagnostico, int idUsuario, string mensaje)
         {            
@@ -93,8 +95,7 @@ namespace _3_Persistencia
                     conexion.Close();
                     conexion.Dispose();
                 }
-            }
-            
-        }
-    }
-}
+            }            
+        }//end agregar
+    }//end class
+}//end namespace

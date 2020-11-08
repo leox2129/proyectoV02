@@ -17,6 +17,13 @@ namespace _4_TipoDeDato
             this.estado = estado;
             this.rol = rol;
         }
+        public DTUsuario(string nombre, int id, string estado, string rol)
+        {
+            this.nombre = nombre;
+            this.id = id;
+            this.estado = estado;
+            this.rol = rol;
+        }
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Id { get => id; set => id = value; }

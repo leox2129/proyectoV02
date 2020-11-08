@@ -26,9 +26,12 @@ namespace Negocio
             return idusuario;
         }
 
-        public object ListarUsuarios()
+        public List<DTUsuario> ListarUsuarios()
         {
-            throw new NotImplementedException();
+            List<DTUsuario> list = new List<DTUsuario>();
+            PersistenciaUsuario persistencia = new PersistenciaUsuario();
+            list = persistencia.ListarUsuarios();
+            return list;
         }
 
         /// <summary>

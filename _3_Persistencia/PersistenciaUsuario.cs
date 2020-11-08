@@ -1,8 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using _4_TipoDeDato;
-
-
+using System.Collections.Generic;
 
 namespace _3_Persistencia
 {
@@ -41,6 +40,61 @@ namespace _3_Persistencia
             }
         }
 
+        public List<DTUsuario> ListarUsuarios()
+        {
+            List<DTUsuario> list = new List<DTUsuario>();           
+            MySqlConnection conexion = null;
+            MySqlDataReader reader = null;
+            try
+            {
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                //nombre
+                string sql = @"select idUsuarios, rol, nombre, estado 
+                                from usuarios 
+                                where estado='activo'";
+                /*string sql = @"select idUsuarios, nombre, password,  
+                            from usuarios where nombre=@nombre and password=@password";*/
+                MySqlCommand comando = new MySqlCommand(sql, conexion);                
+                //comando.Parameters.AddWithValue("@password", usuarioPasword);
+                reader = comando.ExecuteReader();
+                //si hay por lo menos una fila entra
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string idUsuario = (reader[0] != DBNull.Value) ? reader.GetString(0) : "";
+                        string rol = (reader[1] != DBNull.Value) ? reader.GetString(1) : "";
+                        string nombre = (reader[2] != DBNull.Value) ? reader.GetString(2) : "";                                             
+                        string estado = (reader[3] != DBNull.Value) ? reader.GetString(3) : "";
+                        int idUsuarioInt = int.Parse(idUsuario);
+                        DTUsuario data = new DTUsuario(nombre, idUsuarioInt,estado,rol);
+                        list.Add(data);             
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                string mensaje = ex.ToString();
+                Console.WriteLine("Error: " + mensaje);                
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+                if (reader != null)
+                {
+                    reader.Close();
+                    conexion.Dispose();
+                }
+
+            }
+            return list;
+        }//ListarUsuarios end
+
 
         /// <summary>
         /// login 
@@ -60,10 +114,7 @@ namespace _3_Persistencia
                 string sql = @"select idUsuarios, password, rol
                                 from usuarios 
                                 where nombre=@nombre  
-                                and estado='activo'";
-                
-               
-
+                                and estado='activo'";               
                 /*string sql = @"select idUsuarios, nombre, password,  
                             from usuarios where nombre=@nombre and password=@password";*/
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
@@ -111,6 +162,6 @@ namespace _3_Persistencia
 
             }
             return uARetornar;
-        }
-    }
-}
+        }//end 
+    }//end class
+}//end namespace

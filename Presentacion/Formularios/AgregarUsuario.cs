@@ -14,7 +14,6 @@ namespace Presentacion.Formularios
 {
     public partial class AgregarUsuario : Form
     {
-
         public AgregarUsuario()
         {
             InitializeComponent();
@@ -25,8 +24,16 @@ namespace Presentacion.Formularios
         {
             UsuarioModelo mostrar = new UsuarioModelo();
             dgvUsuario.DataSource = mostrar.ListarUsuarios();
+
             //dgvPatologia.DataSource = modelo.ListaPatologia();            
+             
+
+            //cmbRol.DataSource = ;
+            //cmbRol.ValueMember = "id";
+            //cmbRol.DisplayMember = "sintoma";
         }
+
+
 
 
         private void AgregarUsuario_Load(object sender, EventArgs e)

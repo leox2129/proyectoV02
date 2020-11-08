@@ -63,7 +63,7 @@
             this.txtMombreUsu.Location = new System.Drawing.Point(147, 204);
             this.txtMombreUsu.Name = "txtMombreUsu";
             this.txtMombreUsu.Size = new System.Drawing.Size(133, 20);
-            this.txtMombreUsu.TabIndex = 0;
+            this.txtMombreUsu.TabIndex = 4;
             // 
             // txtPassUsuario
             // 

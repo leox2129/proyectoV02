@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _4_TipoDeDato;
 using Negocio;
-//using Presentacion.Variables;
 using Usuarios.Variables;
+
 
 namespace Usuarios.Formularios
 {
@@ -54,14 +54,13 @@ namespace Usuarios.Formularios
                 int idUsuario = usuario.ObtenerUsuario(usuarioNombre, usuarioPasword, Variables.Globales.nombrePrograma);
                 if (idUsuario >= 1) 
                 {
-                    //asignas el id del usuario
                     Variables.Globales.idUsuario = idUsuario;
                     Menu ap = new Menu();
                     ap.Show();
                 } 
                 else 
                 {
-                    MessageBox.Show("usuario a cotraseña invalidos");
+                    MessageBox.Show(errores);
                 }               
             }
 
@@ -105,6 +104,9 @@ namespace Usuarios.Formularios
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+
+
             /*
             if (!string.IsNullOrEmpty(txtMombreUsu.Text))
             {

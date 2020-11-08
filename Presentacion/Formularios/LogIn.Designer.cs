@@ -43,7 +43,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(205, 268);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -53,7 +53,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(124, 268);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -63,7 +63,7 @@
             this.txtMombreUsu.Location = new System.Drawing.Point(147, 204);
             this.txtMombreUsu.Name = "txtMombreUsu";
             this.txtMombreUsu.Size = new System.Drawing.Size(133, 20);
-            this.txtMombreUsu.TabIndex = 2;
+            this.txtMombreUsu.TabIndex = 0;
             // 
             // txtPassUsuario
             // 
@@ -71,7 +71,7 @@
             this.txtPassUsuario.Name = "txtPassUsuario";
             this.txtPassUsuario.PasswordChar = '*';
             this.txtPassUsuario.Size = new System.Drawing.Size(133, 20);
-            this.txtPassUsuario.TabIndex = 3;
+            this.txtPassUsuario.TabIndex = 1;
             // 
             // label1
             // 

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace _4_TipoDeDato
 {
-    public class DTChat
+    public class DataChat
     {
         private string nombre;
         private string mensaje;
 
-        public DTChat(string nombre, string mensaje)
+        public DataChat(string nombre, string mensaje)
         {
             this.Nombre = nombre;
             this.Mensaje = mensaje;
@@ -18,10 +18,4 @@ namespace _4_TipoDeDato
         public string Nombre { get => nombre; set => nombre = value; }
         public string Mensaje { get => mensaje; set => mensaje = value; }
     }
-
-    public class DataChat
-    {
-    }
 }
-
-

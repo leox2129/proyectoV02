@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvDianostico = new System.Windows.Forms.DataGridView();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnAgregarSintoma = new System.Windows.Forms.Button();
-            this.dTDiagnosticoMostrarMedicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iddiagnosticoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gravedadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePatologiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePacienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTDiagnosticoMostrarMedicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnAgregarSintoma = new System.Windows.Forms.Button();
+            this.btnChat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDianostico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTDiagnosticoMostrarMedicoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,37 +64,6 @@
             this.dgvDianostico.Size = new System.Drawing.Size(765, 245);
             this.dgvDianostico.TabIndex = 0;
             this.dgvDianostico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSintomas_CellContentClick);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(34, 22);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(85, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre Sintoma";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(125, 22);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 3;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            // 
-            // btnAgregarSintoma
-            // 
-            this.btnAgregarSintoma.Location = new System.Drawing.Point(319, 22);
-            this.btnAgregarSintoma.Name = "btnAgregarSintoma";
-            this.btnAgregarSintoma.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarSintoma.TabIndex = 4;
-            this.btnAgregarSintoma.Text = "Agregar";
-            this.btnAgregarSintoma.UseVisualStyleBackColor = true;
-            this.btnAgregarSintoma.Click += new System.EventHandler(this.btnAgregarSintoma_Click);
-            // 
-            // dTDiagnosticoMostrarMedicoBindingSource
-            // 
-            this.dTDiagnosticoMostrarMedicoBindingSource.DataSource = typeof(_4_TipoDeDato.DTDiagnosticoMostrarMedico);
             // 
             // iddiagnosticoDataGridViewTextBoxColumn
             // 
@@ -131,11 +101,53 @@
             this.nombrePacienteDataGridViewTextBoxColumn.Name = "nombrePacienteDataGridViewTextBoxColumn";
             this.nombrePacienteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // dTDiagnosticoMostrarMedicoBindingSource
+            // 
+            this.dTDiagnosticoMostrarMedicoBindingSource.DataSource = typeof(_4_TipoDeDato.DTDiagnosticoMostrarMedico);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(34, 22);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(85, 13);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre Sintoma";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(125, 22);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
+            // btnAgregarSintoma
+            // 
+            this.btnAgregarSintoma.Location = new System.Drawing.Point(319, 22);
+            this.btnAgregarSintoma.Name = "btnAgregarSintoma";
+            this.btnAgregarSintoma.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarSintoma.TabIndex = 4;
+            this.btnAgregarSintoma.Text = "Agregar";
+            this.btnAgregarSintoma.UseVisualStyleBackColor = true;
+            this.btnAgregarSintoma.Click += new System.EventHandler(this.btnAgregarSintoma_Click);
+            // 
+            // btnChat
+            // 
+            this.btnChat.Location = new System.Drawing.Point(319, 62);
+            this.btnChat.Name = "btnChat";
+            this.btnChat.Size = new System.Drawing.Size(113, 23);
+            this.btnChat.TabIndex = 5;
+            this.btnChat.Text = "Chatear con usuario";
+            this.btnChat.UseVisualStyleBackColor = true;
+            this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
+            // 
             // ListarDiagnostico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.btnChat);
             this.Controls.Add(this.btnAgregarSintoma);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePatologiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePacienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dTDiagnosticoMostrarMedicoBindingSource;
+        private System.Windows.Forms.Button btnChat;
     }
 }

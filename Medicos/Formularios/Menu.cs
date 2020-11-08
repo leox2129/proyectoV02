@@ -120,7 +120,7 @@ namespace Medicos.Formularios
         private void btnListarDignostico_Click(object sender, EventArgs e)
         {
             ListarDiagnostico listarDiagnostico = new ListarDiagnostico();
-            listarDiagnostico.Show();            
+            listarDiagnostico.Show();
         }
     }
 }

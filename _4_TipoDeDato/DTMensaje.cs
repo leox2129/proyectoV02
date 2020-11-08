@@ -8,9 +8,9 @@ namespace _4_TipoDeDato
 {
     class DTMensaje
     {
-        /*public List<DataChat> ObtenerMensajes(long id)
+        public List<DataChat> ObtenerMensajes(long id)
         {
-            List<DataChat> lista = new List<DataChat>();
+            //List<DataChat> lista = new List<DataChat>();
             /*
             MensajesRepo chatRep = new MensajesRepo();
             List<MensajeEntidad> list2 = chatRep.GetMensajes(id);
@@ -29,7 +29,7 @@ namespace _4_TipoDeDato
             MensajesRepo chatRep = new MensajesRepo();
             chatRep.Agregar(idDiagnostico, idUsuario, mensaje);
             //throw new NotImplementedException();
-        }*/
+        }*
     }
 
 }

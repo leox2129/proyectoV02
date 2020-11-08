@@ -47,7 +47,8 @@ namespace Medicos.Formularios
             {
                 DataGridViewRow fila = dgvDianostico.CurrentRow;
 
-                idPatologia = (long)fila.Cells[0].Value;
+                int idDiag = (int)fila.Cells[0].Value;
+
                 string nombrePatologia = (string)fila.Cells[2].Value;
                 //instanciar el chat
                 /*SintomaPatologia formSintoma = new SintomaPatologia(idPatologia, nombrePatologia);
@@ -64,6 +65,34 @@ namespace Medicos.Formularios
         private void dgvSintomas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnChat_Click(object sender, EventArgs e)
+        {
+            int indice = -1;
+            int idDiagnostico = -1;
+            try
+            {
+                indice = dgvDianostico.CurrentRow.Index;
+            }
+            catch
+            {
+                MessageBox.Show("Seleccione un Cliente a editar");
+            }
+            if (indice > -1)
+            {
+                DataGridViewRow fila = dgvDianostico.CurrentRow;
+
+                int idDiag = (int)fila.Cells[0].Value;
+                //id del medico
+                //Variables.Globales.idUsuario;
+                //Chat formChat = new 
+                
+                //instanciar el chat
+                /*SintomaPatologia formSintoma = new SintomaPatologia(idPatologia, nombrePatologia);
+                //Agregarsin nuevo = new AgregarPatologiaNuevo(idSintoma);
+                formSintoma.Show();*/
+            }
         }
     }
 }

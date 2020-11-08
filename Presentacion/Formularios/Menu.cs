@@ -123,6 +123,11 @@ namespace Presentacion.Formularios
             AgregarUsuario usuarios= new AgregarUsuario();
             usuarios.Show();
         }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

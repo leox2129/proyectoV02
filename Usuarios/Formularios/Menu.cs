@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 ///llamada a presentacion 
 
@@ -20,7 +21,16 @@ namespace Usuarios.Formularios
         {
             InitializeComponent();
         }
+        private void btnSintopato_Click(object sender, EventArgs e)
+        {
+            SintomaPatologia sintopato = new SintomaPatologia();
+            sintopato.Show();
 
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
 
@@ -100,7 +110,7 @@ namespace Usuarios.Formularios
             /*
             AgregarPatologiaNuevo forpato = new AgregarPatologiaNuevo();
             forpato.Show();*/
-         }
+        }
 
         private void MenuVertical_Paint(object sender, PaintEventArgs e)
         {
@@ -109,16 +119,23 @@ namespace Usuarios.Formularios
 
         private void btnDiagnostico_Click(object sender, EventArgs e)
         {
-            //llamar a formuario,
-            SintomaPatologia formulario = new SintomaPatologia();
-            formulario.Show();
-        }
 
+        }
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SintomaPatologia formulario = new SintomaPatologia();
+            formulario.Show();
+
+
+
+        }
     }
+
 }
 
 

@@ -83,9 +83,10 @@ namespace Medicos.Formularios
                 DataGridViewRow fila = dgvDianostico.CurrentRow;
                 int idDiag = (int)fila.Cells[0].Value;
                 DiagnosticoModelo modelo = new DiagnosticoModelo();
-                List<DTDiagnosticoMostrarMedico> listaModelo = modelo.ListarDiagnosticosMedico();
+                List<DTDiagnosticoMostrarMedico> listaModelo = modelo.ListarDiagnosticosMedico();                
                 List<DTDiagnosticoMostrarMedico> listaAux = listaModelo.Where(a => a.Iddiagnostico == idDiag).ToList();
                 //if ()
+                modelo.ActualizarDiagnosticoEstadoChat(idDiag);
                 if (listaAux.Count>=1)
                 {
                     Chat chatform = new Chat(Variables.Globales.idUsuario, idDiag);

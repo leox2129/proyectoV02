@@ -71,7 +71,8 @@ namespace _3_Persistencia
                         on pat.idPatologia = diag.idPatologia
                         inner join usuarios as usu
                         on diag.idPaciente = usu.idUsuarios
-                        where diag.quierechat=1
+                        where diag.quierechat=1 and  
+                        estado='pendiente'
                         order by pat.gravedad desc";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 reader = comando.ExecuteReader();
@@ -118,6 +119,33 @@ namespace _3_Persistencia
             }
             return list;
         }//end listar Diagnostico
+
+        public void ActualizartDiagnosticoEstado(int idDiago)
+        {
+            MySqlConnection conexion = null;
+            try
+            {
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                string sql = @"update diagnosticos SET estado ='atendido' WHERE iddiagnosticos=@idDiago";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@iddialog", idDiago);
+                comando.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                string mensaje = ex.ToString();
+                Console.WriteLine("hola" + mensaje);
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+            }        
+        }
 
         public void ActualizartDiagnostico(int idDiagonostico)
         {

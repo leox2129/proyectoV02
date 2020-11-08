@@ -80,6 +80,13 @@ namespace Negocio
             return diagnostico;
         }//end calcular Patologia
 
+        public void ActualizarDiagnosticoEstadoChat(int idDiago)
+        {
+            PersistenciaDiagnostico persistencia = new PersistenciaDiagnostico();
+            persistencia.ActualizartDiagnosticoEstado(idDiago);
+            //persistencia. ;
+        }
+
         public List<DTDiagnosticoMostrarMedico> ListarDiagnosticosMedico()
         {
             List<DTDiagnosticoMostrarMedico> list = new List<DTDiagnosticoMostrarMedico>();

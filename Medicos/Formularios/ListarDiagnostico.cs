@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _4_TipoDeDato;
 using Negocio;
 
 namespace Medicos.Formularios
@@ -82,11 +83,21 @@ namespace Medicos.Formularios
             if (indice > -1)
             {
                 DataGridViewRow fila = dgvDianostico.CurrentRow;
-
                 int idDiag = (int)fila.Cells[0].Value;
-                Chat chatform = new Chat(Variables.Globales.idUsuario, idDiag);
-                chatform.Show();
-                
+                DiagnosticoModelo modelo = new DiagnosticoModelo();
+                List<DTDiagnosticoMostrarMedico> listaModelo = modelo.ListarDiagnosticosMedico();
+                List<DTDiagnosticoMostrarMedico> listaAux = listaModelo.Where(a => a.Iddiagnostico == idDiag).ToList();
+                //if ()
+                if (listaAux.Count>=1)
+                {
+                    Chat chatform = new Chat(Variables.Globales.idUsuario, idDiag);
+                    chatform.Show();
+                }
+                else
+                {
+                    MessageBox.Show("ya esta atendido");
+                    dgvDianostico.DataSource = listaModelo;
+                }                                
             }
         }
     }

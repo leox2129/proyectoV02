@@ -134,6 +134,7 @@
     <None Include="Properties\DataSources\Negocio.Objetos.DataUsuario.datasource" />
     <None Include="Properties\DataSources\_4_TipoDeDato.DTPatologia.datasource" />
     <None Include="Properties\DataSources\_4_TipoDeDato.DTSintoma.datasource" />
+    <None Include="Properties\DataSources\_4_TipoDeDato.DTUsuario1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

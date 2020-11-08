@@ -52,6 +52,10 @@ C:\Users\leandro\Documents\Programacion3\leoxVFInal\proyectoV02\_3_Persistencia\
 C:\Users\leandro\Documents\Programacion3\leoxVFInal\proyectoV02\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csproj.CopyComplete
 C:\Users\leandro\Documents\Programacion3\leoxVFInal\proyectoV02\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.dll
 C:\Users\leandro\Documents\Programacion3\leoxVFInal\proyectoV02\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.pdb
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csprojAssemblyReference.cache
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.AssemblyInfoInputs.cache
+C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.AssemblyInfo.cs
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\_3_Persistencia.deps.json
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\_3_Persistencia.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\_3_Persistencia.pdb
@@ -69,10 +73,6 @@ C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstan
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\MySql.Data.xml
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\bin\Debug\netstandard2.0\_4_TipoDeDato.pdb
-C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csprojAssemblyReference.cache
-C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.AssemblyInfoInputs.cache
-C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.AssemblyInfo.cs
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.csproj.CopyComplete
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.dll
 C:\Users\equipo\Desktop\Clase02-master\Clase01\_3_Persistencia\obj\Debug\netstandard2.0\_3_Persistencia.pdb

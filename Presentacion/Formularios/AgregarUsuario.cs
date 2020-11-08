@@ -40,7 +40,7 @@ namespace Presentacion.Formularios
             //agregar palo
             
             string nombre = txtNombre.Text.Trim();
-            string rol = txtRol.Text.Trim();
+            ///string rol = txtRol.Text.Trim();
             string estado = txtEstado.Text.Trim();
             string password = txtPassword.Text.Trim();
             string errores = "";

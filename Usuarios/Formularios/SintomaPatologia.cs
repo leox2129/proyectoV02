@@ -203,7 +203,8 @@ namespace Usuarios.Formularios
             if (resultado == DialogResult.Yes)
             {
                 //actualizar quiere chat
-                Chat formChar = new Chat(Variables.Globales.idUsuario, diagnostico.IdDiagonostico);
+                Chat formChat = new Chat(Variables.Globales.idUsuario, diagnostico.IdDiagonostico);
+                formChat.Show();
                 //diagnostico.IdDiagonostico;
                 //Variables.Globales.idUsuario
                 //diagnosticoModelo;

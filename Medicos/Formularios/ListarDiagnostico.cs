@@ -84,14 +84,9 @@ namespace Medicos.Formularios
                 DataGridViewRow fila = dgvDianostico.CurrentRow;
 
                 int idDiag = (int)fila.Cells[0].Value;
-                //id del medico
-                //Variables.Globales.idUsuario;
-                //Chat formChat = new 
+                Chat chatform = new Chat(Variables.Globales.idUsuario, idDiag);
+                chatform.Show();
                 
-                //instanciar el chat
-                /*SintomaPatologia formSintoma = new SintomaPatologia(idPatologia, nombrePatologia);
-                //Agregarsin nuevo = new AgregarPatologiaNuevo(idSintoma);
-                formSintoma.Show();*/
             }
         }
     }

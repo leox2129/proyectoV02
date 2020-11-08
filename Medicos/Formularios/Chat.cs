@@ -30,8 +30,7 @@ namespace Medicos.Formularios
         }
         private void InitChat()
         {
-
-            //
+            
             List<DataChat> list = null;
             Mensaje chat = new Mensaje();
             list = chat.ObtenerMensajes(this.idDiagnostico);
@@ -39,7 +38,7 @@ namespace Medicos.Formularios
             //llenar listbox.
             //lstChat.Items.Add("inicio");
             t = new System.Timers.Timer();
-            t.AutoReset = true;
+            t.AutoReset = false;
             // Start the timer
             t.Enabled = true;
 
@@ -119,6 +118,11 @@ namespace Medicos.Formularios
         {
 
             ActualizarListaChat();
+        }
+
+        private void Chat_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -68,7 +68,8 @@
             this.Controls.Add(this.txtMensaje);
             this.Controls.Add(this.lstChat);
             this.Name = "Chat";
-            this.Text = "Chat";            
+            this.Text = "Chat";
+            this.Load += new System.EventHandler(this.Chat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

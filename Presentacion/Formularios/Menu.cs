@@ -17,9 +17,12 @@ namespace Presentacion.Formularios
 {
     public partial class Menu : Form
     {
+
+
         public Menu()
         {
             InitializeComponent();
+          
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
@@ -125,6 +128,11 @@ namespace Presentacion.Formularios
         }
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }

@@ -11,11 +11,24 @@ namespace Negocio
     {
         private int id;
         private string nombre;
+        private string estado;
+        private string password;
+        private string rolseleccionado;
+        
 
         public UsuarioModelo()
         {
 
         }
+
+        public UsuarioModelo(string nombre, string estado, string password, string rolseleccionado)
+        {
+            this.nombre = nombre;
+            this.estado = estado;
+            this.password = password;
+            this.rolseleccionado = rolseleccionado;
+        }
+
         public int RegsitrarUsuario(DTUsuario usu)
         {
             int idusuario = 0;
@@ -49,6 +62,16 @@ namespace Negocio
             usuarioId = usuarioPersistencia.ObtenerUsuario(nombreUsuario, pasword, usuarioRol);
             return usuarioId;
             
+        }
+
+        public int Agregar()
+        {
+            int usuarioId = -1;
+            PersistenciaUsuario usuarioPersistencia = new PersistenciaUsuario();
+            usuarioId = usuarioPersistencia.AgregarUsuario(this.nombre, this.estado, this.password, this.rolseleccionado);
+            return usuarioId;
+
+            //this.nombre
         }
     }
     

@@ -106,8 +106,10 @@
             this.dgvUsuario.Location = new System.Drawing.Point(30, 182);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
+            this.dgvUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuario.Size = new System.Drawing.Size(581, 214);
             this.dgvUsuario.TabIndex = 10;
+            this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -189,6 +191,7 @@
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(136, 21);
             this.cmbRol.TabIndex = 15;
+            this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.cmbRol_SelectedIndexChanged);
             // 
             // lblrol
             // 

@@ -95,6 +95,42 @@ namespace _3_Persistencia
             return list;
         }//ListarUsuarios end
 
+        public int AgregarUsuario(string nombre, string estado, string password, string rolseleccionado)
+        {
+
+            MySqlConnection conexion = null;
+            try
+            {
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                string sql = @"insert into usuarios (nombre,estado ,password, rol) values 
+                                (@nombre, @estado,@password, @rol)";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@nombre", nombre);
+                comando.Parameters.AddWithValue("@estado",estado);
+                comando.Parameters.AddWithValue("@password", password);
+                comando.Parameters.AddWithValue("@rol",rolseleccionado);
+                comando.ExecuteNonQuery();
+                //obtiene el ultimo id ingresado
+                return Int32.Parse(comando.LastInsertedId.ToString());
+            }
+            catch (MySqlException ex)
+            {
+                string mensaje = ex.ToString();
+                Console.WriteLine("Error: " + mensaje);
+                return -1;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+
+            }
+        }//end AgregarUsuario
+
 
         /// <summary>
         /// login 

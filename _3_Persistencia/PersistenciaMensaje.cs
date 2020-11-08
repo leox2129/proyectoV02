@@ -73,7 +73,7 @@ namespace _3_Persistencia
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql = @"mensaje (idUsuario, idDiagnostico ,mensaje) 
+                string sql = @"insert into mensaje (idUsuario, idDiagnostico ,mensaje) 
                             values (?idusuario,?idiag,?mensaje)";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
                 comando.Parameters.Add("?idusuario", MySqlDbType.Int32).Value = idUsuario;

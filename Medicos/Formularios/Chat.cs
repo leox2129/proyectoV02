@@ -38,9 +38,9 @@ namespace Medicos.Formularios
             //llenar listbox.
             //lstChat.Items.Add("inicio");
             t = new System.Timers.Timer();
-            t.AutoReset = false;
+            t.AutoReset = true;
             // Start the timer
-            t.Enabled = true;
+            t.Enabled = false;//despues cambiar a tru
 
             t.Interval = 1000;//1s
             t.Elapsed += On_TimeEvent;
@@ -98,7 +98,7 @@ namespace Medicos.Formularios
                 }
                 this.cantidadMensajes = list.Count;
             }
-            t.Enabled = true;
+            t.Enabled = false;//cambiar a true
             //list.Count = l
 
 

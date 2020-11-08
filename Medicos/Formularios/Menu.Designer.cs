@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.dataUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnListarDignostico = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnRestau = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -40,6 +39,8 @@
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnListarDignostico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuarioBindingSource)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestau)).BeginInit();
@@ -48,23 +49,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnListarDignostico
-            // 
-            this.btnListarDignostico.FlatAppearance.BorderSize = 0;
-            this.btnListarDignostico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnListarDignostico.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnListarDignostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarDignostico.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnListarDignostico.Location = new System.Drawing.Point(2, 188);
-            this.btnListarDignostico.Margin = new System.Windows.Forms.Padding(2);
-            this.btnListarDignostico.Name = "btnListarDignostico";
-            this.btnListarDignostico.Size = new System.Drawing.Size(218, 28);
-            this.btnListarDignostico.TabIndex = 1;
-            this.btnListarDignostico.Text = "Listar Diagnosticos";
-            this.btnListarDignostico.UseVisualStyleBackColor = true;
-            this.btnListarDignostico.Click += new System.EventHandler(this.btnListarDignostico_Click);
             // 
             // BarraTitulo
             // 
@@ -139,18 +125,19 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.btnListarDignostico);
+            this.MenuVertical.Controls.Add(this.pictureBox5);
+            this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 35);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 615);
+            this.MenuVertical.Size = new System.Drawing.Size(214, 615);
             this.MenuVertical.TabIndex = 5;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -163,11 +150,36 @@
             // 
             this.PanelContenedor.BackColor = System.Drawing.SystemColors.Window;
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(220, 35);
+            this.PanelContenedor.Location = new System.Drawing.Point(214, 35);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1080, 615);
+            this.PanelContenedor.Size = new System.Drawing.Size(1086, 615);
             this.PanelContenedor.TabIndex = 6;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(0, 188);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(45, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnListarDignostico
+            // 
+            this.btnListarDignostico.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnListarDignostico.FlatAppearance.BorderSize = 0;
+            this.btnListarDignostico.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnListarDignostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarDignostico.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnListarDignostico.Location = new System.Drawing.Point(43, 188);
+            this.btnListarDignostico.Name = "btnListarDignostico";
+            this.btnListarDignostico.Size = new System.Drawing.Size(171, 27);
+            this.btnListarDignostico.TabIndex = 9;
+            this.btnListarDignostico.Text = "Diagnostico";
+            this.btnListarDignostico.UseVisualStyleBackColor = false;
             // 
             // Menu
             // 
@@ -190,12 +202,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnListarDignostico;
         private System.Windows.Forms.BindingSource dataUsuarioBindingSource;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox btnCerrar;
@@ -205,5 +217,7 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximisar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnListarDignostico;
     }
 }

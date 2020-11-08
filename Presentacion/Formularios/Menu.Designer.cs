@@ -35,9 +35,9 @@
             this.btnChat = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnSintopato = new System.Windows.Forms.Button();
             this.btnPatologia = new System.Windows.Forms.Button();
-            this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -147,8 +147,23 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 35);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 615);
+            this.MenuVertical.Size = new System.Drawing.Size(214, 615);
             this.MenuVertical.TabIndex = 5;
+            // 
+            // btnAgregarUsuario
+            // 
+            this.btnAgregarUsuario.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnAgregarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(33, 321);
+            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(184, 27);
+            this.btnAgregarUsuario.TabIndex = 12;
+            this.btnAgregarUsuario.Text = "Agregar Usuarios";
+            this.btnAgregarUsuario.UseVisualStyleBackColor = false;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
             // btnSintopato
             // 
@@ -179,21 +194,6 @@
             this.btnPatologia.Text = "Agregar patologia";
             this.btnPatologia.UseVisualStyleBackColor = false;
             this.btnPatologia.Click += new System.EventHandler(this.btnPatologia_Click);
-            // 
-            // btnAgregarUsuario
-            // 
-            this.btnAgregarUsuario.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAgregarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(33, 321);
-            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(184, 27);
-            this.btnAgregarUsuario.TabIndex = 12;
-            this.btnAgregarUsuario.Text = "Agregar Usuarios";
-            this.btnAgregarUsuario.UseVisualStyleBackColor = false;
-            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
             // pictureBox7
             // 
@@ -241,12 +241,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

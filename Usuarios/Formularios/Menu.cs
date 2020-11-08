@@ -102,14 +102,6 @@ namespace Usuarios.Formularios
             forpato.Show();*/
          }
 
-        private void btnSintopato_Click(object sender, EventArgs e)
-        {
-            /*
-            SintomaPatologia sintopato = new SintomaPatologia();
-            sintopato.Show();*/
-
-        }
-
         private void MenuVertical_Paint(object sender, PaintEventArgs e)
         {
 

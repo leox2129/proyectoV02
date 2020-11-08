@@ -119,6 +119,42 @@ namespace _3_Persistencia
             return list;
         }//end listar Diagnostico
 
+        public void ActualizartDiagnostico(int idDiagonostico)
+        {
+            
+            MySqlConnection conexion = null;
+            try
+            {
+                conexion = ConexionDB.GetConexion();
+                conexion.Open();
+                string sql = @"update diagnosticos set quierechat=1
+                               where iddiagnosticos = @iddialog";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@iddialog", idDiagonostico);                
+                comando.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                string mensaje = ex.ToString();
+                Console.WriteLine("hola" + mensaje);
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                }
+            }
+            
+
+
+
+
+
+
+            //
+        }
+
         public List<DTDiagnosticoMostrarMedico> ListarDiagnosticoMedico()
         {
             {

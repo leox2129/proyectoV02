@@ -87,5 +87,11 @@ namespace Negocio
             list = persistencia.ListarDiagnosticoMedico();
             return list;
         }
+
+        public void ActualizarDiagnosticoChat(int idDiagonostico)
+        {
+            PersistenciaDiagnostico persistenia = new PersistenciaDiagnostico();
+            persistenia.ActualizartDiagnostico(idDiagonostico);
+        }
     }
 }

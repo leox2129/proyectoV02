@@ -26,10 +26,8 @@ namespace Medicos.Formularios
 
         private void InitDataGrid()
         {
-
             DiagnosticoModelo modelo = new DiagnosticoModelo();
-            dgvDianostico.DataSource = modelo.ListarDiagnosticosMedico();           
-
+            dgvDianostico.DataSource = modelo.ListarDiagnosticosMedico();
         }
             
         private void btnAgregarSintoma_Click(object sender, EventArgs e)

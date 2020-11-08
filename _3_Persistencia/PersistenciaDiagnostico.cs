@@ -127,9 +127,9 @@ namespace _3_Persistencia
             {
                 conexion = ConexionDB.GetConexion();
                 conexion.Open();
-                string sql = @"update diagnosticos SET estado ='atendido' WHERE iddiagnosticos=@idDiago";
+                string sql = @"update diagnosticos SET estado='atendido' WHERE iddiagnosticos=@idDiago";
                 MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@iddialog", idDiago);
+                comando.Parameters.AddWithValue("@idDiago", idDiago);
                 comando.ExecuteNonQuery();
             }
             catch (MySqlException ex)
@@ -173,13 +173,6 @@ namespace _3_Persistencia
                     conexion.Close();
                 }
             }
-            
-
-
-
-
-
-
             //
         }
 

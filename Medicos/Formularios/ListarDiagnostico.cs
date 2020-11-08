@@ -45,9 +45,7 @@ namespace Medicos.Formularios
             if (indice > -1)
             {
                 DataGridViewRow fila = dgvDianostico.CurrentRow;
-
                 int idDiag = (int)fila.Cells[0].Value;
-
                 string nombrePatologia = (string)fila.Cells[2].Value;
                 //instanciar el chat
                 /*SintomaPatologia formSintoma = new SintomaPatologia(idPatologia, nombrePatologia);
